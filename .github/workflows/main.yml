@@ -24,10 +24,16 @@ jobs:
       with:
         ruby-version: head
         bundler-cache: true
-    - name: Install autoconf (Windows)
+    - name: Install MSYS2 (Windows)
+      if: runner.os == 'Windows'
+      uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        install: autoconf
+    - name: Add MSYS2 to PATH (Windows)
       if: runner.os == 'Windows'
       run: |
-        choco install autoconf -y
+        echo "C:\msys64\usr\bin" | Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
     - name: Lint config.yml
       run: bundle exec rake lint
     - name: Run Ruby tests
