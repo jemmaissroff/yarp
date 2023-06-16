@@ -40,7 +40,11 @@ desc "Generate all ERB template based files"
 task templates: TEMPLATES
 
 file "configure" do
-  sh "autoconf"
+  if RUBY_PLATFORM =~ /mingw|mswin/
+    sh "C:/msys64/usr/bin/bash -lc 'autoconf'"
+  else
+    sh "autoconf"
+  end
 end
 
 file "Makefile" => "configure" do
