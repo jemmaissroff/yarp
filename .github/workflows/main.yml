@@ -24,6 +24,10 @@ jobs:
       with:
         ruby-version: head
         bundler-cache: true
+    - name: Install autoconf (Windows)
+      if: runner.os == 'Windows'
+      run: |
+        choco install autoconf -y
     - name: Lint config.yml
       run: bundle exec rake lint
     - name: Run Ruby tests
