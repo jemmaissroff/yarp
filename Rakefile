@@ -41,7 +41,7 @@ task templates: TEMPLATES
 
 file "configure" do
   if RUBY_PLATFORM =~ /mingw|mswin/
-    sh "cd ext/yarp && C:/msys64/usr/bin/bash -lc 'autoconf'"
+    sh "C:/msys64/usr/bin/bash -lc 'cd ext/yarp && autoconf'"
   else
     sh "autoconf"
   end
