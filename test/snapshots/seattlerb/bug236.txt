@@ -9,22 +9,24 @@ ProgramNode(0...15)(
        nil,
        nil,
        BlockNode(1...7)(
-         [:a],
-         BlockParametersNode(2...6)(
-           ParametersNode(3...5)(
-             [RequiredParameterNode(3...4)(:a)],
+         ScopeNode(1...7)(
+           BlockParametersNode(2...6)(
+             ParametersNode(3...5)(
+               [RequiredParameterNode(3...4)(:a)],
+               [],
+               [],
+               RestParameterNode(4...5)((4...5), nil),
+               [],
+               nil,
+               nil
+             ),
              [],
-             [],
-             RestParameterNode(4...5)((4...5), nil),
-             [],
-             nil,
-             nil
+             (2...3),
+             (5...6)
            ),
-           [],
-           (2...3),
-           (5...6)
+           nil,
+           [:a]
          ),
-         nil,
          (1...2),
          (6...7)
        ),
@@ -39,22 +41,24 @@ ProgramNode(0...15)(
        nil,
        nil,
        BlockNode(10...15)(
-         [:a],
-         BlockParametersNode(11...14)(
-           ParametersNode(12...13)(
-             [RequiredParameterNode(12...13)(:a)],
+         ScopeNode(10...15)(
+           BlockParametersNode(11...14)(
+             ParametersNode(12...13)(
+               [RequiredParameterNode(12...13)(:a)],
+               [],
+               [],
+               nil,
+               [],
+               nil,
+               nil
+             ),
              [],
-             [],
-             nil,
-             [],
-             nil,
-             nil
+             (11...12),
+             (13...14)
            ),
-           [],
-           (11...12),
-           (13...14)
+           nil,
+           [:a]
          ),
-         nil,
          (10...11),
          (14...15)
        ),

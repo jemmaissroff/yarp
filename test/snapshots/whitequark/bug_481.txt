@@ -10,9 +10,7 @@ ProgramNode(0...28)(
          [DefNode(2...14)(
             (6...7),
             nil,
-            nil,
-            nil,
-            [],
+            ScopeNode(2...14)(nil, nil, []),
             (2...5),
             nil,
             (7...8),
@@ -33,7 +31,11 @@ ProgramNode(0...28)(
        nil,
        nil,
        nil,
-       BlockNode(22...28)([], nil, nil, (22...24), (25...28)),
+       BlockNode(22...28)(
+         ScopeNode(22...28)(nil, nil, []),
+         (22...24),
+         (25...28)
+       ),
        0,
        "tap"
      )]

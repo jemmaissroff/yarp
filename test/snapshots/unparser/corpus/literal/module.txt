@@ -59,11 +59,13 @@ ProgramNode(0...106)(
           DefNode(80...102)(
             (84...87),
             nil,
-            nil,
-            StatementsNode(92...96)(
-              [SymbolNode(92...96)((92...93), (93...96), nil, "bar")]
+            ScopeNode(80...102)(
+              nil,
+              StatementsNode(92...96)(
+                [SymbolNode(92...96)((92...93), (93...96), nil, "bar")]
+              ),
+              []
             ),
-            [],
             (80...83),
             nil,
             nil,

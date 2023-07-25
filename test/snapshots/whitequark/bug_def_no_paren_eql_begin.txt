@@ -4,9 +4,7 @@ ProgramNode(0...23)(
     [DefNode(0...23)(
        (4...7),
        nil,
-       nil,
-       nil,
-       [],
+       ScopeNode(0...23)(nil, nil, []),
        (0...3),
        nil,
        nil,

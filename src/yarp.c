@@ -921,19 +921,35 @@ yp_block_argument_node_create(yp_parser_t *parser, const yp_token_t *operator, y
     return node;
 }
 
+static yp_scope_node_t *
+yp_scope_node_create(yp_parser_t *parser, yp_node_t *parameters, yp_node_t *statements, yp_constant_id_list_t *locals, const char *start, const char *end){
+    yp_scope_node_t *node = YP_ALLOC_NODE(parser, yp_scope_node_t);
+    *node = (yp_scope_node_t) {
+         {
+             .type = YP_NODE_SCOPE_NODE,
+             .location = { .start = start, .end = end },
+         },
+        .parameters = (yp_parameters_node_t *)parameters,
+        .statements = (yp_statements_node_t *)statements,
+        .locals = *locals,
+    };
+
+    return node;
+}
+
 // Allocate and initialize a new BlockNode node.
 static yp_block_node_t *
 yp_block_node_create(yp_parser_t *parser, yp_constant_id_list_t *locals, const yp_token_t *opening, yp_block_parameters_node_t *parameters, yp_node_t *statements, const yp_token_t *closing) {
     yp_block_node_t *node = YP_ALLOC_NODE(parser, yp_block_node_t);
+    // FIX: yp_block_parameters_node doesn't need to be as such
+    yp_scope_node_t *scope = yp_scope_node_create(parser, (yp_node_t *)parameters, statements, locals, opening->start, closing->end);
 
     *node = (yp_block_node_t) {
         {
             .type = YP_NODE_BLOCK_NODE,
             .location = { .start = opening->start, .end = closing->end },
         },
-        .locals = *locals,
-        .parameters = parameters,
-        .statements = statements,
+        .scope = scope,
         .opening_loc = YP_LOCATION_TOKEN_VALUE(opening),
         .closing_loc = YP_LOCATION_TOKEN_VALUE(closing)
     };
@@ -1726,6 +1742,17 @@ yp_def_node_create(
         end = end_keyword->end;
     }
 
+    yp_scope_node_t *scope = YP_ALLOC_NODE(parser, yp_scope_node_t);
+    *scope = (yp_scope_node_t) {
+         {
+           .type = YP_NODE_SCOPE_NODE,
+            .location = { .start = def_keyword->start, .end = end },
+         },
+        .parameters = parameters,
+        .statements = (yp_statements_node_t *)statements,
+        .locals = *locals,
+    };
+
     *node = (yp_def_node_t) {
         {
             .type = YP_NODE_DEF_NODE,
@@ -1733,9 +1760,7 @@ yp_def_node_create(
         },
         .name_loc = YP_LOCATION_TOKEN_VALUE(name),
         .receiver = receiver,
-        .parameters = parameters,
-        .statements = statements,
-        .locals = *locals,
+        .scope = scope,
         .def_keyword_loc = YP_LOCATION_TOKEN_VALUE(def_keyword),
         .operator_loc = YP_OPTIONAL_LOCATION_TOKEN_VALUE(operator),
         .lparen_loc = YP_OPTIONAL_LOCATION_TOKEN_VALUE(lparen),
@@ -2736,6 +2761,7 @@ yp_lambda_node_create(
     const yp_token_t *closing
 ) {
     yp_lambda_node_t *node = YP_ALLOC_NODE(parser, yp_lambda_node_t);
+    yp_scope_node_t *scope = yp_scope_node_create(parser, (yp_node_t *)parameters, statements, locals, opening->start, closing->end);
 
     *node = (yp_lambda_node_t) {
         {
@@ -2745,10 +2771,8 @@ yp_lambda_node_create(
                 .end = closing->end
             },
         },
-        .locals = *locals,
+        .scope = scope,
         .opening_loc = YP_LOCATION_TOKEN_VALUE(opening),
-        .parameters = parameters,
-        .statements = statements
     };
 
     return node;

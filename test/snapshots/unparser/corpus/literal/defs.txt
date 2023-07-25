@@ -4,9 +4,7 @@ ProgramNode(0...266)(
     [DefNode(0...16)(
        (9...12),
        SelfNode(4...8)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(0...16)(nil, nil, []),
        (0...3),
        (8...9),
        nil,
@@ -17,11 +15,23 @@ ProgramNode(0...266)(
      DefNode(18...40)(
        (27...30),
        SelfNode(22...26)(),
-       nil,
-       StatementsNode(33...36)(
-         [CallNode(33...36)(nil, nil, (33...36), nil, nil, nil, nil, 0, "bar")]
+       ScopeNode(18...40)(
+         nil,
+         StatementsNode(33...36)(
+           [CallNode(33...36)(
+              nil,
+              nil,
+              (33...36),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "bar"
+            )]
+         ),
+         []
        ),
-       [],
        (18...21),
        (26...27),
        nil,
@@ -32,12 +42,34 @@ ProgramNode(0...266)(
      DefNode(42...70)(
        (51...54),
        SelfNode(46...50)(),
-       nil,
-       StatementsNode(57...66)(
-         [CallNode(57...60)(nil, nil, (57...60), nil, nil, nil, nil, 0, "bar"),
-          CallNode(63...66)(nil, nil, (63...66), nil, nil, nil, nil, 0, "baz")]
+       ScopeNode(42...70)(
+         nil,
+         StatementsNode(57...66)(
+           [CallNode(57...60)(
+              nil,
+              nil,
+              (57...60),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "bar"
+            ),
+            CallNode(63...66)(
+              nil,
+              nil,
+              (63...66),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "baz"
+            )]
+         ),
+         []
        ),
-       [],
        (42...45),
        (50...51),
        nil,
@@ -48,11 +80,23 @@ ProgramNode(0...266)(
      DefNode(72...93)(
        (80...83),
        ConstantReadNode(76...79)(),
-       nil,
-       StatementsNode(86...89)(
-         [CallNode(86...89)(nil, nil, (86...89), nil, nil, nil, nil, 0, "bar")]
+       ScopeNode(72...93)(
+         nil,
+         StatementsNode(86...89)(
+           [CallNode(86...89)(
+              nil,
+              nil,
+              (86...89),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "bar"
+            )]
+         ),
+         []
        ),
-       [],
        (72...75),
        (79...80),
        nil,
@@ -71,22 +115,24 @@ ProgramNode(0...266)(
            nil,
            nil,
            BlockNode(104...113)(
-             [:bar],
-             BlockParametersNode(106...111)(
-               ParametersNode(107...110)(
-                 [RequiredParameterNode(107...110)(:bar)],
+             ScopeNode(104...113)(
+               BlockParametersNode(106...111)(
+                 ParametersNode(107...110)(
+                   [RequiredParameterNode(107...110)(:bar)],
+                   [],
+                   [],
+                   nil,
+                   [],
+                   nil,
+                   nil
+                 ),
                  [],
-                 [],
-                 nil,
-                 [],
-                 nil,
-                 nil
+                 (106...107),
+                 (110...111)
                ),
-               [],
-               (106...107),
-               (110...111)
+               nil,
+               [:bar]
              ),
-             nil,
              (104...105),
              (112...113)
            ),
@@ -96,21 +142,23 @@ ProgramNode(0...266)(
          (99...100),
          (113...114)
        ),
-       nil,
-       StatementsNode(121...124)(
-         [CallNode(121...124)(
-            nil,
-            nil,
-            (121...124),
-            nil,
-            nil,
-            nil,
-            nil,
-            0,
-            "bar"
-          )]
+       ScopeNode(95...128)(
+         nil,
+         StatementsNode(121...124)(
+           [CallNode(121...124)(
+              nil,
+              nil,
+              (121...124),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "bar"
+            )]
+         ),
+         []
        ),
-       [],
        (95...98),
        (114...115),
        nil,
@@ -135,21 +183,23 @@ ProgramNode(0...266)(
          (134...135),
          (141...142)
        ),
-       nil,
-       StatementsNode(149...152)(
-         [CallNode(149...152)(
-            nil,
-            nil,
-            (149...152),
-            nil,
-            nil,
-            nil,
-            nil,
-            0,
-            "bar"
-          )]
+       ScopeNode(130...156)(
+         nil,
+         StatementsNode(149...152)(
+           [CallNode(149...152)(
+              nil,
+              nil,
+              (149...152),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "bar"
+            )]
+         ),
+         []
        ),
-       [],
        (130...133),
        (142...143),
        nil,
@@ -178,21 +228,23 @@ ProgramNode(0...266)(
          (162...163),
          (175...176)
        ),
-       nil,
-       StatementsNode(183...186)(
-         [CallNode(183...186)(
-            nil,
-            nil,
-            (183...186),
-            nil,
-            nil,
-            nil,
-            nil,
-            0,
-            "baz"
-          )]
+       ScopeNode(158...190)(
+         nil,
+         StatementsNode(183...186)(
+           [CallNode(183...186)(
+              nil,
+              nil,
+              (183...186),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "baz"
+            )]
+         ),
+         []
        ),
-       [],
        (158...161),
        (176...177),
        nil,
@@ -211,21 +263,23 @@ ProgramNode(0...266)(
          (196...197),
          (205...206)
        ),
-       nil,
-       StatementsNode(213...216)(
-         [CallNode(213...216)(
-            nil,
-            nil,
-            (213...216),
-            nil,
-            nil,
-            nil,
-            nil,
-            0,
-            "baz"
-          )]
+       ScopeNode(192...220)(
+         nil,
+         StatementsNode(213...216)(
+           [CallNode(213...216)(
+              nil,
+              nil,
+              (213...216),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "baz"
+            )]
+         ),
+         []
        ),
-       [],
        (192...195),
        (206...207),
        nil,
@@ -236,21 +290,23 @@ ProgramNode(0...266)(
      DefNode(222...243)(
        (230...233),
        ConstantReadNode(226...229)(),
-       nil,
-       StatementsNode(236...239)(
-         [CallNode(236...239)(
-            nil,
-            nil,
-            (236...239),
-            nil,
-            nil,
-            nil,
-            nil,
-            0,
-            "baz"
-          )]
+       ScopeNode(222...243)(
+         nil,
+         StatementsNode(236...239)(
+           [CallNode(236...239)(
+              nil,
+              nil,
+              (236...239),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "baz"
+            )]
+         ),
+         []
        ),
-       [],
        (222...225),
        (229...230),
        nil,
@@ -271,21 +327,23 @@ ProgramNode(0...266)(
          0,
          "foo"
        ),
-       nil,
-       StatementsNode(259...262)(
-         [CallNode(259...262)(
-            nil,
-            nil,
-            (259...262),
-            nil,
-            nil,
-            nil,
-            nil,
-            0,
-            "baz"
-          )]
+       ScopeNode(245...266)(
+         nil,
+         StatementsNode(259...262)(
+           [CallNode(259...262)(
+              nil,
+              nil,
+              (259...262),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "baz"
+            )]
+         ),
+         []
        ),
-       [],
        (245...248),
        (252...253),
        nil,

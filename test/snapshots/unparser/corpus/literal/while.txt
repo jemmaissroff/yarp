@@ -14,45 +14,47 @@ ProgramNode(0...620)(
             nil,
             nil,
             BlockNode(15...64)(
-              [:bar, :foo],
-              BlockParametersNode(17...22)(
-                ParametersNode(18...21)(
-                  [RequiredParameterNode(18...21)(:bar)],
+              ScopeNode(15...64)(
+                BlockParametersNode(17...22)(
+                  ParametersNode(18...21)(
+                    [RequiredParameterNode(18...21)(:bar)],
+                    [],
+                    [],
+                    nil,
+                    [],
+                    nil,
+                    nil
+                  ),
                   [],
-                  [],
-                  nil,
-                  [],
-                  nil,
-                  nil
+                  (17...18),
+                  (21...22)
                 ),
-                [],
-                (17...18),
-                (21...22)
-              ),
-              StatementsNode(27...60)(
-                [WhileNode(27...60)(
-                   (27...32),
-                   CallNode(33...36)(
-                     nil,
-                     nil,
-                     (33...36),
-                     nil,
-                     nil,
-                     nil,
-                     nil,
-                     0,
-                     "foo"
-                   ),
-                   StatementsNode(43...52)(
-                     [LocalVariableWriteNode(43...52)(
-                        :foo,
-                        0,
-                        LocalVariableReadNode(49...52)(:bar, 0),
-                        (43...46),
-                        (47...48)
-                      )]
-                   )
-                 )]
+                StatementsNode(27...60)(
+                  [WhileNode(27...60)(
+                     (27...32),
+                     CallNode(33...36)(
+                       nil,
+                       nil,
+                       (33...36),
+                       nil,
+                       nil,
+                       nil,
+                       nil,
+                       0,
+                       "foo"
+                     ),
+                     StatementsNode(43...52)(
+                       [LocalVariableWriteNode(43...52)(
+                          :foo,
+                          0,
+                          LocalVariableReadNode(49...52)(:bar, 0),
+                          (43...46),
+                          (47...48)
+                        )]
+                     )
+                   )]
+                ),
+                [:bar, :foo]
               ),
               (15...16),
               (63...64)
@@ -66,55 +68,57 @@ ProgramNode(0...620)(
      DefNode(70...110)(
        (74...77),
        nil,
-       nil,
-       StatementsNode(80...106)(
-         [WhileNode(80...106)(
-            (90...95),
-            CallNode(96...106)(
-              LocalVariableReadNode(96...99)(:foo, 0),
-              nil,
-              (100...102),
-              nil,
-              ArgumentsNode(103...106)(
-                [CallNode(103...106)(
-                   nil,
-                   nil,
-                   (103...106),
-                   nil,
-                   nil,
-                   nil,
-                   nil,
-                   0,
-                   "baz"
-                 )]
+       ScopeNode(70...110)(
+         nil,
+         StatementsNode(80...106)(
+           [WhileNode(80...106)(
+              (90...95),
+              CallNode(96...106)(
+                LocalVariableReadNode(96...99)(:foo, 0),
+                nil,
+                (100...102),
+                nil,
+                ArgumentsNode(103...106)(
+                  [CallNode(103...106)(
+                     nil,
+                     nil,
+                     (103...106),
+                     nil,
+                     nil,
+                     nil,
+                     nil,
+                     0,
+                     "baz"
+                   )]
+                ),
+                nil,
+                nil,
+                0,
+                "!="
               ),
-              nil,
-              nil,
-              0,
-              "!="
-            ),
-            StatementsNode(80...89)(
-              [LocalVariableWriteNode(80...89)(
-                 :foo,
-                 0,
-                 CallNode(86...89)(
-                   nil,
-                   nil,
-                   (86...89),
-                   nil,
-                   nil,
-                   nil,
-                   nil,
+              StatementsNode(80...89)(
+                [LocalVariableWriteNode(80...89)(
+                   :foo,
                    0,
-                   "bar"
-                 ),
-                 (80...83),
-                 (84...85)
-               )]
-            )
-          )]
+                   CallNode(86...89)(
+                     nil,
+                     nil,
+                     (86...89),
+                     nil,
+                     nil,
+                     nil,
+                     nil,
+                     0,
+                     "bar"
+                   ),
+                   (80...83),
+                   (84...85)
+                 )]
+              )
+            )]
+         ),
+         [:foo]
        ),
-       [:foo],
        (70...73),
        nil,
        nil,
@@ -238,55 +242,57 @@ ProgramNode(0...620)(
             nil,
             nil,
             BlockNode(246...295)(
-              [:baz, :foo],
-              BlockParametersNode(248...253)(
-                ParametersNode(249...252)(
-                  [RequiredParameterNode(249...252)(:baz)],
+              ScopeNode(246...295)(
+                BlockParametersNode(248...253)(
+                  ParametersNode(249...252)(
+                    [RequiredParameterNode(249...252)(:baz)],
+                    [],
+                    [],
+                    nil,
+                    [],
+                    nil,
+                    nil
+                  ),
                   [],
-                  [],
-                  nil,
-                  [],
-                  nil,
-                  nil
+                  (248...249),
+                  (252...253)
                 ),
-                [],
-                (248...249),
-                (252...253)
-              ),
-              StatementsNode(258...291)(
-                [WhileNode(258...291)(
-                   (258...263),
-                   CallNode(264...267)(
-                     nil,
-                     nil,
-                     (264...267),
-                     nil,
-                     nil,
-                     nil,
-                     nil,
-                     0,
-                     "foo"
-                   ),
-                   StatementsNode(274...283)(
-                     [LocalVariableWriteNode(274...283)(
-                        :foo,
-                        0,
-                        CallNode(280...283)(
-                          nil,
-                          nil,
-                          (280...283),
-                          nil,
-                          nil,
-                          nil,
-                          nil,
+                StatementsNode(258...291)(
+                  [WhileNode(258...291)(
+                     (258...263),
+                     CallNode(264...267)(
+                       nil,
+                       nil,
+                       (264...267),
+                       nil,
+                       nil,
+                       nil,
+                       nil,
+                       0,
+                       "foo"
+                     ),
+                     StatementsNode(274...283)(
+                       [LocalVariableWriteNode(274...283)(
+                          :foo,
                           0,
-                          "bar"
-                        ),
-                        (274...277),
-                        (278...279)
-                      )]
-                   )
-                 )]
+                          CallNode(280...283)(
+                            nil,
+                            nil,
+                            (280...283),
+                            nil,
+                            nil,
+                            nil,
+                            nil,
+                            0,
+                            "bar"
+                          ),
+                          (274...277),
+                          (278...279)
+                        )]
+                     )
+                   )]
+                ),
+                [:baz, :foo]
               ),
               (246...247),
               (294...295)
@@ -310,45 +316,47 @@ ProgramNode(0...620)(
             nil,
             nil,
             BlockNode(317...366)(
-              [:foo],
-              BlockParametersNode(319...324)(
-                ParametersNode(320...323)(
-                  [RequiredParameterNode(320...323)(:foo)],
+              ScopeNode(317...366)(
+                BlockParametersNode(319...324)(
+                  ParametersNode(320...323)(
+                    [RequiredParameterNode(320...323)(:foo)],
+                    [],
+                    [],
+                    nil,
+                    [],
+                    nil,
+                    nil
+                  ),
                   [],
-                  [],
-                  nil,
-                  [],
-                  nil,
-                  nil
+                  (319...320),
+                  (323...324)
                 ),
-                [],
-                (319...320),
-                (323...324)
-              ),
-              StatementsNode(329...362)(
-                [WhileNode(329...362)(
-                   (329...334),
-                   LocalVariableReadNode(335...338)(:foo, 0),
-                   StatementsNode(345...354)(
-                     [LocalVariableWriteNode(345...354)(
-                        :foo,
-                        0,
-                        CallNode(351...354)(
-                          nil,
-                          nil,
-                          (351...354),
-                          nil,
-                          nil,
-                          nil,
-                          nil,
+                StatementsNode(329...362)(
+                  [WhileNode(329...362)(
+                     (329...334),
+                     LocalVariableReadNode(335...338)(:foo, 0),
+                     StatementsNode(345...354)(
+                       [LocalVariableWriteNode(345...354)(
+                          :foo,
                           0,
-                          "bar"
-                        ),
-                        (345...348),
-                        (349...350)
-                      )]
-                   )
-                 )]
+                          CallNode(351...354)(
+                            nil,
+                            nil,
+                            (351...354),
+                            nil,
+                            nil,
+                            nil,
+                            nil,
+                            0,
+                            "bar"
+                          ),
+                          (345...348),
+                          (349...350)
+                        )]
+                     )
+                   )]
+                ),
+                [:foo]
               ),
               (317...318),
               (365...366)
@@ -554,7 +562,11 @@ ProgramNode(0...620)(
               nil,
               nil,
               nil,
-              BlockNode(540...543)([], nil, nil, (540...541), (542...543)),
+              BlockNode(540...543)(
+                ScopeNode(540...543)(nil, nil, []),
+                (540...541),
+                (542...543)
+              ),
               0,
               "foo"
             )]
@@ -583,7 +595,11 @@ ProgramNode(0...620)(
               nil,
               nil,
               nil,
-              BlockNode(604...607)([], nil, nil, (604...605), (606...607)),
+              BlockNode(604...607)(
+                ScopeNode(604...607)(nil, nil, []),
+                (604...605),
+                (606...607)
+              ),
               0,
               "foo"
             )]

@@ -22,7 +22,11 @@ ProgramNode(0...20)(
                )]
             ),
             nil,
-            BlockNode(14...20)([], nil, nil, (14...16), (17...20)),
+            BlockNode(14...20)(
+              ScopeNode(14...20)(nil, nil, []),
+              (14...16),
+              (17...20)
+            ),
             0,
             "fun"
           )]

@@ -10,7 +10,11 @@ ProgramNode(0...188)(
          nil,
          nil,
          nil,
-         BlockNode(11...13)([], nil, nil, (11...12), (12...13)),
+         BlockNode(11...13)(
+           ScopeNode(11...13)(nil, nil, []),
+           (11...12),
+           (12...13)
+         ),
          0,
          "b?"
        ),
@@ -27,7 +31,11 @@ ProgramNode(0...188)(
          nil,
          nil,
          nil,
-         BlockNode(24...26)([], nil, nil, (24...25), (25...26)),
+         BlockNode(24...26)(
+           ScopeNode(24...26)(nil, nil, []),
+           (24...25),
+           (25...26)
+         ),
          0,
          "b?"
        ),
@@ -69,7 +77,11 @@ ProgramNode(0...188)(
            nil,
            nil,
            nil,
-           BlockNode(72...75)([], nil, nil, (72...73), (74...75)),
+           BlockNode(72...75)(
+             ScopeNode(72...75)(nil, nil, []),
+             (72...73),
+             (74...75)
+           ),
            0,
            "a"
          ),
@@ -102,20 +114,22 @@ ProgramNode(0...188)(
          ),
          (114...115),
          BlockNode(116...130)(
-           [],
-           nil,
-           StatementsNode(125...126)(
-             [CallNode(125...126)(
-                nil,
-                nil,
-                (125...126),
-                nil,
-                nil,
-                nil,
-                nil,
-                0,
-                "c"
-              )]
+           ScopeNode(116...130)(
+             nil,
+             StatementsNode(125...126)(
+               [CallNode(125...126)(
+                  nil,
+                  nil,
+                  (125...126),
+                  nil,
+                  nil,
+                  nil,
+                  nil,
+                  0,
+                  "c"
+                )]
+             ),
+             []
            ),
            (116...118),
            (127...130)

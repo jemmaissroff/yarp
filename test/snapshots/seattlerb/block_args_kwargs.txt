@@ -9,22 +9,26 @@ ProgramNode(0...23)(
        nil,
        nil,
        BlockNode(2...23)(
-         [:kwargs],
-         BlockParametersNode(4...14)(
-           ParametersNode(5...13)(
+         ScopeNode(2...23)(
+           BlockParametersNode(4...14)(
+             ParametersNode(5...13)(
+               [],
+               [],
+               [],
+               nil,
+               [],
+               KeywordRestParameterNode(5...13)((5...7), (7...13)),
+               nil
+             ),
              [],
-             [],
-             [],
-             nil,
-             [],
-             KeywordRestParameterNode(5...13)((5...7), (7...13)),
-             nil
+             (4...5),
+             (13...14)
            ),
-           [],
-           (4...5),
-           (13...14)
+           StatementsNode(15...21)(
+             [LocalVariableReadNode(15...21)(:kwargs, 0)]
+           ),
+           [:kwargs]
          ),
-         StatementsNode(15...21)([LocalVariableReadNode(15...21)(:kwargs, 0)]),
          (2...3),
          (22...23)
        ),

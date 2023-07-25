@@ -6,32 +6,38 @@ ProgramNode(0...190)(
        DefNode(6...33)(
          (10...13),
          nil,
-         ParametersNode(14...28)(
-           [],
-           [OptionalParameterNode(14...28)(
-              :a,
-              (14...15),
-              (16...17),
-              CallNode(18...28)(
-                nil,
-                nil,
-                (18...21),
-                nil,
-                nil,
-                nil,
-                BlockNode(22...28)([], nil, nil, (22...24), (25...28)),
-                0,
-                "tap"
-              )
-            )],
-           [],
+         ScopeNode(6...33)(
+           ParametersNode(14...28)(
+             [],
+             [OptionalParameterNode(14...28)(
+                :a,
+                (14...15),
+                (16...17),
+                CallNode(18...28)(
+                  nil,
+                  nil,
+                  (18...21),
+                  nil,
+                  nil,
+                  nil,
+                  BlockNode(22...28)(
+                    ScopeNode(22...28)(nil, nil, []),
+                    (22...24),
+                    (25...28)
+                  ),
+                  0,
+                  "tap"
+                )
+              )],
+             [],
+             nil,
+             [],
+             nil,
+             nil
+           ),
            nil,
-           [],
-           nil,
-           nil
+           [:a]
          ),
-         nil,
-         [:a],
          (6...9),
          nil,
          nil,
@@ -46,21 +52,27 @@ ProgramNode(0...190)(
        DefNode(53...77)(
          (57...60),
          nil,
-         nil,
-         StatementsNode(62...72)(
-           [CallNode(62...72)(
-              nil,
-              nil,
-              (62...65),
-              nil,
-              nil,
-              nil,
-              BlockNode(66...72)([], nil, nil, (66...68), (69...72)),
-              0,
-              "tap"
-            )]
+         ScopeNode(53...77)(
+           nil,
+           StatementsNode(62...72)(
+             [CallNode(62...72)(
+                nil,
+                nil,
+                (62...65),
+                nil,
+                nil,
+                nil,
+                BlockNode(66...72)(
+                  ScopeNode(66...72)(nil, nil, []),
+                  (66...68),
+                  (69...72)
+                ),
+                0,
+                "tap"
+              )]
+           ),
+           []
          ),
-         [],
          (53...56),
          nil,
          nil,
@@ -75,32 +87,38 @@ ProgramNode(0...190)(
        DefNode(97...129)(
          (106...109),
          SelfNode(101...105)(),
-         ParametersNode(110...124)(
-           [],
-           [OptionalParameterNode(110...124)(
-              :a,
-              (110...111),
-              (112...113),
-              CallNode(114...124)(
-                nil,
-                nil,
-                (114...117),
-                nil,
-                nil,
-                nil,
-                BlockNode(118...124)([], nil, nil, (118...120), (121...124)),
-                0,
-                "tap"
-              )
-            )],
-           [],
+         ScopeNode(97...129)(
+           ParametersNode(110...124)(
+             [],
+             [OptionalParameterNode(110...124)(
+                :a,
+                (110...111),
+                (112...113),
+                CallNode(114...124)(
+                  nil,
+                  nil,
+                  (114...117),
+                  nil,
+                  nil,
+                  nil,
+                  BlockNode(118...124)(
+                    ScopeNode(118...124)(nil, nil, []),
+                    (118...120),
+                    (121...124)
+                  ),
+                  0,
+                  "tap"
+                )
+              )],
+             [],
+             nil,
+             [],
+             nil,
+             nil
+           ),
            nil,
-           [],
-           nil,
-           nil
+           [:a]
          ),
-         nil,
-         [:a],
          (97...100),
          (105...106),
          nil,
@@ -115,21 +133,27 @@ ProgramNode(0...190)(
        DefNode(149...178)(
          (158...161),
          SelfNode(153...157)(),
-         nil,
-         StatementsNode(163...173)(
-           [CallNode(163...173)(
-              nil,
-              nil,
-              (163...166),
-              nil,
-              nil,
-              nil,
-              BlockNode(167...173)([], nil, nil, (167...169), (170...173)),
-              0,
-              "tap"
-            )]
+         ScopeNode(149...178)(
+           nil,
+           StatementsNode(163...173)(
+             [CallNode(163...173)(
+                nil,
+                nil,
+                (163...166),
+                nil,
+                nil,
+                nil,
+                BlockNode(167...173)(
+                  ScopeNode(167...173)(nil, nil, []),
+                  (167...169),
+                  (170...173)
+                ),
+                0,
+                "tap"
+              )]
+           ),
+           []
          ),
-         [],
          (149...152),
          (157...158),
          nil,

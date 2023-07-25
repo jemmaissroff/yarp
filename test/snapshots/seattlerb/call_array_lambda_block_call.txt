@@ -9,17 +9,23 @@ ProgramNode(0...18)(
        ArgumentsNode(2...11)(
          [ArrayNode(2...11)(
             [LambdaNode(3...10)(
-               [],
-               (3...5),
-               BlockParametersNode(5...7)(nil, [], (5...6), (6...7)),
-               nil
+               ScopeNode(3...10)(
+                 BlockParametersNode(5...7)(nil, [], (5...6), (6...7)),
+                 nil,
+                 []
+               ),
+               (3...5)
              )],
             (2...3),
             (10...11)
           )]
        ),
        nil,
-       BlockNode(12...18)([], nil, nil, (12...14), (15...18)),
+       BlockNode(12...18)(
+         ScopeNode(12...18)(nil, nil, []),
+         (12...14),
+         (15...18)
+       ),
        0,
        "a"
      )]

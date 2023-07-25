@@ -4,15 +4,17 @@ ProgramNode(0...47)(
     [DefNode(0...20)(
        (4...5),
        nil,
-       nil,
-       StatementsNode(10...20)(
-         [RescueModifierNode(10...20)(
-            IntegerNode(10...11)(),
-            (12...18),
-            IntegerNode(19...20)()
-          )]
+       ScopeNode(0...20)(
+         nil,
+         StatementsNode(10...20)(
+           [RescueModifierNode(10...20)(
+              IntegerNode(10...11)(),
+              (12...18),
+              IntegerNode(19...20)()
+            )]
+         ),
+         []
        ),
-       [],
        (0...3),
        nil,
        (5...6),
@@ -23,15 +25,17 @@ ProgramNode(0...47)(
      DefNode(22...47)(
        (31...32),
        SelfNode(26...30)(),
-       nil,
-       StatementsNode(37...47)(
-         [RescueModifierNode(37...47)(
-            IntegerNode(37...38)(),
-            (39...45),
-            IntegerNode(46...47)()
-          )]
+       ScopeNode(22...47)(
+         nil,
+         StatementsNode(37...47)(
+           [RescueModifierNode(37...47)(
+              IntegerNode(37...38)(),
+              (39...45),
+              IntegerNode(46...47)()
+            )]
+         ),
+         []
        ),
-       [],
        (22...25),
        (30...31),
        (32...33),

@@ -4,9 +4,11 @@ ProgramNode(0...51)(
     [DefNode(0...11)(
        (4...7),
        nil,
-       nil,
-       StatementsNode(10...11)([IntegerNode(10...11)()]),
-       [],
+       ScopeNode(0...11)(
+         nil,
+         StatementsNode(10...11)([IntegerNode(10...11)()]),
+         []
+       ),
        (0...3),
        nil,
        nil,
@@ -17,23 +19,25 @@ ProgramNode(0...51)(
      DefNode(13...27)(
        (17...20),
        nil,
-       nil,
-       StatementsNode(23...27)(
-         [CallNode(23...27)(
-            nil,
-            nil,
-            (23...24),
-            nil,
-            ArgumentsNode(25...27)(
-              [StringNode(25...27)((25...26), (26...26), (26...27), "")]
-            ),
-            nil,
-            nil,
-            0,
-            "A"
-          )]
+       ScopeNode(13...27)(
+         nil,
+         StatementsNode(23...27)(
+           [CallNode(23...27)(
+              nil,
+              nil,
+              (23...24),
+              nil,
+              ArgumentsNode(25...27)(
+                [StringNode(25...27)((25...26), (26...26), (26...27), "")]
+              ),
+              nil,
+              nil,
+              0,
+              "A"
+            )]
+         ),
+         []
        ),
-       [],
        (13...16),
        nil,
        nil,
@@ -44,31 +48,33 @@ ProgramNode(0...51)(
      DefNode(29...51)(
        (33...39),
        nil,
-       nil,
-       StatementsNode(42...51)(
-         [CallNode(42...51)(
-            CallNode(42...47)(
-              IntegerNode(42...43)(),
+       ScopeNode(29...51)(
+         nil,
+         StatementsNode(42...51)(
+           [CallNode(42...51)(
+              CallNode(42...47)(
+                IntegerNode(42...43)(),
+                nil,
+                (44...45),
+                nil,
+                ArgumentsNode(46...47)([IntegerNode(46...47)()]),
+                nil,
+                nil,
+                0,
+                "+"
+              ),
               nil,
-              (44...45),
+              (48...49),
               nil,
-              ArgumentsNode(46...47)([IntegerNode(46...47)()]),
+              ArgumentsNode(50...51)([IntegerNode(50...51)()]),
               nil,
               nil,
               0,
               "+"
-            ),
-            nil,
-            (48...49),
-            nil,
-            ArgumentsNode(50...51)([IntegerNode(50...51)()]),
-            nil,
-            nil,
-            0,
-            "+"
-          )]
+            )]
+         ),
+         []
        ),
-       [],
        (29...32),
        nil,
        nil,

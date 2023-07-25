@@ -4,17 +4,19 @@ ProgramNode(0...18)(
     [DefNode(0...18)(
        (4...5),
        nil,
-       ParametersNode(6...12)(
-         [],
-         [],
-         [],
+       ScopeNode(0...18)(
+         ParametersNode(6...12)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           BlockParameterNode(6...12)((7...12), (6...7))
+         ),
          nil,
-         [],
-         nil,
-         BlockParameterNode(6...12)((7...12), (6...7))
+         [:block]
        ),
-       nil,
-       [:block],
        (0...3),
        nil,
        (5...6),

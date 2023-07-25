@@ -9,26 +9,31 @@ ProgramNode(0...12)(
        nil,
        nil,
        BlockNode(2...12)(
-         [:a],
-         BlockParametersNode(4...10)(
-           ParametersNode(5...9)(
-             [RequiredDestructuredParameterNode(5...9)(
-                [SplatNode(6...8)((6...7), RequiredParameterNode(7...8)(:a))],
-                (5...6),
-                (8...9)
-              )],
+         ScopeNode(2...12)(
+           BlockParametersNode(4...10)(
+             ParametersNode(5...9)(
+               [RequiredDestructuredParameterNode(5...9)(
+                  [SplatNode(6...8)(
+                     (6...7),
+                     RequiredParameterNode(7...8)(:a)
+                   )],
+                  (5...6),
+                  (8...9)
+                )],
+               [],
+               [],
+               nil,
+               [],
+               nil,
+               nil
+             ),
              [],
-             [],
-             nil,
-             [],
-             nil,
-             nil
+             (4...5),
+             (9...10)
            ),
-           [],
-           (4...5),
-           (9...10)
+           nil,
+           [:a]
          ),
-         nil,
          (2...3),
          (11...12)
        ),

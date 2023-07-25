@@ -72,7 +72,7 @@ yp_node_new(yp_parser_t *parser, yp_node_t *node, VALUE source, rb_encoding *enc
         }
         <%- end -%>
         default:
-            rb_raise(rb_eRuntimeError, "unknown node type: %d", node->type);
+            rb_raise(rb_eRuntimeError, "unknown node type: %s", yp_node_type_to_str(node->type));
     }
 }
 

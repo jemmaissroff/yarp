@@ -26,11 +26,23 @@ ProgramNode(0...83)(
      DefNode(45...64)(
        (54...55),
        SelfNode(49...53)(),
-       nil,
-       StatementsNode(57...59)(
-         [CallNode(57...59)(nil, nil, (57...59), nil, nil, nil, nil, 0, "_1")]
+       ScopeNode(45...64)(
+         nil,
+         StatementsNode(57...59)(
+           [CallNode(57...59)(
+              nil,
+              nil,
+              (57...59),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "_1"
+            )]
+         ),
+         []
        ),
-       [],
        (45...48),
        (53...54),
        nil,

@@ -9,27 +9,29 @@ ProgramNode(0...21)(
        nil,
        nil,
        BlockNode(2...21)(
-         [:b, :c, :d, :e],
-         BlockParametersNode(4...19)(
-           ParametersNode(5...18)(
-             [RequiredParameterNode(5...6)(:b)],
-             [OptionalParameterNode(8...11)(
-                :c,
-                (8...9),
-                (9...10),
-                IntegerNode(10...11)()
-              )],
-             [RequiredParameterNode(13...14)(:d)],
-             nil,
+         ScopeNode(2...21)(
+           BlockParametersNode(4...19)(
+             ParametersNode(5...18)(
+               [RequiredParameterNode(5...6)(:b)],
+               [OptionalParameterNode(8...11)(
+                  :c,
+                  (8...9),
+                  (9...10),
+                  IntegerNode(10...11)()
+                )],
+               [RequiredParameterNode(13...14)(:d)],
+               nil,
+               [],
+               nil,
+               BlockParameterNode(16...18)((17...18), (16...17))
+             ),
              [],
-             nil,
-             BlockParameterNode(16...18)((17...18), (16...17))
+             (4...5),
+             (18...19)
            ),
-           [],
-           (4...5),
-           (18...19)
+           nil,
+           [:b, :c, :d, :e]
          ),
-         nil,
          (2...3),
          (20...21)
        ),

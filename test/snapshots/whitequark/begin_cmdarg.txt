@@ -18,9 +18,11 @@ ProgramNode(0...28)(
                  nil,
                  nil,
                  BlockNode(16...24)(
-                   [],
-                   nil,
-                   StatementsNode(19...20)([IntegerNode(19...20)()]),
+                   ScopeNode(16...24)(
+                     nil,
+                     StatementsNode(19...20)([IntegerNode(19...20)()]),
+                     []
+                   ),
                    (16...18),
                    (21...24)
                  ),

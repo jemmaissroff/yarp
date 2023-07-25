@@ -9,22 +9,24 @@ ProgramNode(0...15)(
        ArgumentsNode(2...4)([InstanceVariableReadNode(2...4)()]),
        nil,
        BlockNode(5...15)(
-         [:c],
-         BlockParametersNode(8...11)(
-           ParametersNode(9...10)(
-             [RequiredParameterNode(9...10)(:c)],
+         ScopeNode(5...15)(
+           BlockParametersNode(8...11)(
+             ParametersNode(9...10)(
+               [RequiredParameterNode(9...10)(:c)],
+               [],
+               [],
+               nil,
+               [],
+               nil,
+               nil
+             ),
              [],
-             [],
-             nil,
-             [],
-             nil,
-             nil
+             (8...9),
+             (10...11)
            ),
-           [],
-           (8...9),
-           (10...11)
+           nil,
+           [:c]
          ),
-         nil,
          (5...7),
          (12...15)
        ),

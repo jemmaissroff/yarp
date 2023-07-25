@@ -137,9 +137,7 @@ ProgramNode(0...991)(
              [DefNode(134...145)(
                 (138...141),
                 nil,
-                nil,
-                nil,
-                [],
+                ScopeNode(134...145)(nil, nil, []),
                 (134...137),
                 nil,
                 nil,
@@ -243,9 +241,7 @@ ProgramNode(0...991)(
        DefNode(218...234)(
          (227...230),
          SelfNode(222...226)(),
-         nil,
-         nil,
-         [],
+         ScopeNode(218...234)(nil, nil, []),
          (218...221),
          (226...227),
          nil,
@@ -266,9 +262,7 @@ ProgramNode(0...991)(
        DefNode(239...250)(
          (243...246),
          nil,
-         nil,
-         nil,
-         [],
+         ScopeNode(239...250)(nil, nil, []),
          (239...242),
          nil,
          nil,
@@ -343,7 +337,11 @@ ProgramNode(0...991)(
          nil,
          nil,
          nil,
-         BlockNode(296...299)([], nil, nil, (296...297), (298...299)),
+         BlockNode(296...299)(
+           ScopeNode(296...299)(nil, nil, []),
+           (296...297),
+           (298...299)
+         ),
          0,
          "loop"
        ),

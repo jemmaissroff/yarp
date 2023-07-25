@@ -179,22 +179,24 @@ ProgramNode(0...299)(
        ),
        (273...274),
        BlockNode(275...299)(
-         [:x],
-         BlockParametersNode(277...280)(
-           ParametersNode(278...279)(
-             [RequiredParameterNode(278...279)(:x)],
+         ScopeNode(275...299)(
+           BlockParametersNode(277...280)(
+             ParametersNode(278...279)(
+               [RequiredParameterNode(278...279)(:x)],
+               [],
+               [],
+               nil,
+               [],
+               nil,
+               nil
+             ),
              [],
-             [],
-             nil,
-             [],
-             nil,
-             nil
+             (277...278),
+             (279...280)
            ),
-           [],
-           (277...278),
-           (279...280)
+           nil,
+           [:x]
          ),
-         nil,
          (275...276),
          (298...299)
        ),

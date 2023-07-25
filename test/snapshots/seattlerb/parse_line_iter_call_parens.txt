@@ -11,34 +11,38 @@ ProgramNode(0...26)(
        ),
        (3...4),
        BlockNode(5...26)(
-         [:x, :y],
-         BlockParametersNode(8...14)(
-           ParametersNode(9...13)(
-             [RequiredParameterNode(9...10)(:x),
-              RequiredParameterNode(12...13)(:y)],
+         ScopeNode(5...26)(
+           BlockParametersNode(8...14)(
+             ParametersNode(9...13)(
+               [RequiredParameterNode(9...10)(:x),
+                RequiredParameterNode(12...13)(:y)],
+               [],
+               [],
+               nil,
+               [],
+               nil,
+               nil
+             ),
              [],
-             [],
-             nil,
-             [],
-             nil,
-             nil
+             (8...9),
+             (13...14)
            ),
-           [],
-           (8...9),
-           (13...14)
-         ),
-         StatementsNode(17...22)(
-           [CallNode(17...22)(
-              LocalVariableReadNode(17...18)(:x, 0),
-              nil,
-              (19...20),
-              nil,
-              ArgumentsNode(21...22)([LocalVariableReadNode(21...22)(:y, 0)]),
-              nil,
-              nil,
-              0,
-              "+"
-            )]
+           StatementsNode(17...22)(
+             [CallNode(17...22)(
+                LocalVariableReadNode(17...18)(:x, 0),
+                nil,
+                (19...20),
+                nil,
+                ArgumentsNode(21...22)(
+                  [LocalVariableReadNode(21...22)(:y, 0)]
+                ),
+                nil,
+                nil,
+                0,
+                "+"
+              )]
+           ),
+           [:x, :y]
          ),
          (5...7),
          (23...26)

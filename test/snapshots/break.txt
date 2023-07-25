@@ -91,13 +91,15 @@ ProgramNode(0...168)(
          nil,
          nil,
          BlockNode(125...137)(
-           [],
-           nil,
-           StatementsNode(127...135)(
-             [BreakNode(127...135)(
-                ArgumentsNode(133...135)([IntegerNode(133...135)()]),
-                (127...132)
-              )]
+           ScopeNode(125...137)(
+             nil,
+             StatementsNode(127...135)(
+               [BreakNode(127...135)(
+                  ArgumentsNode(133...135)([IntegerNode(133...135)()]),
+                  (127...132)
+                )]
+             ),
+             []
            ),
            (125...126),
            (136...137)
@@ -123,22 +125,26 @@ ProgramNode(0...168)(
          nil,
          nil,
          BlockNode(149...162)(
-           [:a],
-           BlockParametersNode(151...154)(
-             ParametersNode(152...153)(
-               [RequiredParameterNode(152...153)(:a)],
+           ScopeNode(149...162)(
+             BlockParametersNode(151...154)(
+               ParametersNode(152...153)(
+                 [RequiredParameterNode(152...153)(:a)],
+                 [],
+                 [],
+                 nil,
+                 [],
+                 nil,
+                 nil
+               ),
                [],
-               [],
-               nil,
-               [],
-               nil,
-               nil
+               (151...152),
+               (153...154)
              ),
-             [],
-             (151...152),
-             (153...154)
+             StatementsNode(155...160)(
+               [BreakNode(155...160)(nil, (155...160))]
+             ),
+             [:a]
            ),
-           StatementsNode(155...160)([BreakNode(155...160)(nil, (155...160))]),
            (149...150),
            (161...162)
          ),

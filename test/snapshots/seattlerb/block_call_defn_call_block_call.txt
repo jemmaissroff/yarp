@@ -10,29 +10,31 @@ ProgramNode(0...30)(
          [DefNode(2...18)(
             (6...7),
             nil,
-            ParametersNode(8...9)(
-              [RequiredParameterNode(8...9)(:c)],
-              [],
-              [],
-              nil,
-              [],
-              nil,
-              nil
+            ScopeNode(2...18)(
+              ParametersNode(8...9)(
+                [RequiredParameterNode(8...9)(:c)],
+                [],
+                [],
+                nil,
+                [],
+                nil,
+                nil
+              ),
+              StatementsNode(12...13)(
+                [CallNode(12...13)(
+                   nil,
+                   nil,
+                   (12...13),
+                   nil,
+                   nil,
+                   nil,
+                   nil,
+                   0,
+                   "d"
+                 )]
+              ),
+              [:c]
             ),
-            StatementsNode(12...13)(
-              [CallNode(12...13)(
-                 nil,
-                 nil,
-                 (12...13),
-                 nil,
-                 nil,
-                 nil,
-                 nil,
-                 0,
-                 "d"
-               )]
-            ),
-            [:c],
             (2...5),
             nil,
             (7...8),
@@ -53,7 +55,11 @@ ProgramNode(0...30)(
        nil,
        nil,
        nil,
-       BlockNode(24...30)([], nil, nil, (24...26), (27...30)),
+       BlockNode(24...30)(
+         ScopeNode(24...30)(nil, nil, []),
+         (24...26),
+         (27...30)
+       ),
        0,
        "f"
      )]

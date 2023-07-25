@@ -11,17 +11,19 @@ ProgramNode(18...90)(
          [DefNode(54...86)(
             (63...65),
             SelfNode(58...62)(),
-            nil,
-            StatementsNode(67...81)(
-              [LocalVariableWriteNode(67...81)(
-                 :così,
-                 0,
-                 SymbolNode(75...81)((75...76), (76...81), nil, "però"),
-                 (67...72),
-                 (73...74)
-               )]
+            ScopeNode(54...86)(
+              nil,
+              StatementsNode(67...81)(
+                [LocalVariableWriteNode(67...81)(
+                   :così,
+                   0,
+                   SymbolNode(75...81)((75...76), (76...81), nil, "però"),
+                   (67...72),
+                   (73...74)
+                 )]
+              ),
+              [:così]
             ),
-            [:così],
             (54...57),
             (62...63),
             nil,

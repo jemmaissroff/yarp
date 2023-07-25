@@ -4,23 +4,25 @@ ProgramNode(0...278)(
     [DefNode(0...22)(
        (4...7),
        nil,
-       nil,
-       StatementsNode(10...22)(
-         [CallNode(10...22)(
-            nil,
-            nil,
-            (10...14),
-            nil,
-            ArgumentsNode(15...22)(
-              [StringNode(15...22)((15...16), (16...21), (21...22), "Hello")]
-            ),
-            nil,
-            nil,
-            0,
-            "puts"
-          )]
+       ScopeNode(0...22)(
+         nil,
+         StatementsNode(10...22)(
+           [CallNode(10...22)(
+              nil,
+              nil,
+              (10...14),
+              nil,
+              ArgumentsNode(15...22)(
+                [StringNode(15...22)((15...16), (16...21), (21...22), "Hello")]
+              ),
+              nil,
+              nil,
+              0,
+              "puts"
+            )]
+         ),
+         []
        ),
-       [],
        (0...3),
        nil,
        nil,
@@ -31,23 +33,25 @@ ProgramNode(0...278)(
      DefNode(24...48)(
        (28...31),
        nil,
-       nil,
-       StatementsNode(36...48)(
-         [CallNode(36...48)(
-            nil,
-            nil,
-            (36...40),
-            nil,
-            ArgumentsNode(41...48)(
-              [StringNode(41...48)((41...42), (42...47), (47...48), "Hello")]
-            ),
-            nil,
-            nil,
-            0,
-            "puts"
-          )]
+       ScopeNode(24...48)(
+         nil,
+         StatementsNode(36...48)(
+           [CallNode(36...48)(
+              nil,
+              nil,
+              (36...40),
+              nil,
+              ArgumentsNode(41...48)(
+                [StringNode(41...48)((41...42), (42...47), (47...48), "Hello")]
+              ),
+              nil,
+              nil,
+              0,
+              "puts"
+            )]
+         ),
+         []
        ),
-       [],
        (24...27),
        nil,
        (31...32),
@@ -58,29 +62,31 @@ ProgramNode(0...278)(
      DefNode(50...69)(
        (54...57),
        nil,
-       ParametersNode(58...59)(
-         [RequiredParameterNode(58...59)(:x)],
-         [],
-         [],
-         nil,
-         [],
-         nil,
-         nil
+       ScopeNode(50...69)(
+         ParametersNode(58...59)(
+           [RequiredParameterNode(58...59)(:x)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
+         StatementsNode(63...69)(
+           [CallNode(63...69)(
+              nil,
+              nil,
+              (63...67),
+              nil,
+              ArgumentsNode(68...69)([LocalVariableReadNode(68...69)(:x, 0)]),
+              nil,
+              nil,
+              0,
+              "puts"
+            )]
+         ),
+         [:x]
        ),
-       StatementsNode(63...69)(
-         [CallNode(63...69)(
-            nil,
-            nil,
-            (63...67),
-            nil,
-            ArgumentsNode(68...69)([LocalVariableReadNode(68...69)(:x, 0)]),
-            nil,
-            nil,
-            0,
-            "puts"
-          )]
-       ),
-       [:x],
        (50...53),
        nil,
        (57...58),
@@ -91,23 +97,25 @@ ProgramNode(0...278)(
      DefNode(71...97)(
        (79...82),
        CallNode(75...78)(nil, nil, (75...78), nil, nil, nil, nil, 0, "obj"),
-       nil,
-       StatementsNode(85...97)(
-         [CallNode(85...97)(
-            nil,
-            nil,
-            (85...89),
-            nil,
-            ArgumentsNode(90...97)(
-              [StringNode(90...97)((90...91), (91...96), (96...97), "Hello")]
-            ),
-            nil,
-            nil,
-            0,
-            "puts"
-          )]
+       ScopeNode(71...97)(
+         nil,
+         StatementsNode(85...97)(
+           [CallNode(85...97)(
+              nil,
+              nil,
+              (85...89),
+              nil,
+              ArgumentsNode(90...97)(
+                [StringNode(90...97)((90...91), (91...96), (96...97), "Hello")]
+              ),
+              nil,
+              nil,
+              0,
+              "puts"
+            )]
+         ),
+         []
        ),
-       [],
        (71...74),
        (78...79),
        nil,
@@ -128,28 +136,30 @@ ProgramNode(0...278)(
          0,
          "obj"
        ),
-       nil,
-       StatementsNode(115...127)(
-         [CallNode(115...127)(
-            nil,
-            nil,
-            (115...119),
-            nil,
-            ArgumentsNode(120...127)(
-              [StringNode(120...127)(
-                 (120...121),
-                 (121...126),
-                 (126...127),
-                 "Hello"
-               )]
-            ),
-            nil,
-            nil,
-            0,
-            "puts"
-          )]
+       ScopeNode(99...127)(
+         nil,
+         StatementsNode(115...127)(
+           [CallNode(115...127)(
+              nil,
+              nil,
+              (115...119),
+              nil,
+              ArgumentsNode(120...127)(
+                [StringNode(120...127)(
+                   (120...121),
+                   (121...126),
+                   (126...127),
+                   "Hello"
+                 )]
+              ),
+              nil,
+              nil,
+              0,
+              "puts"
+            )]
+         ),
+         []
        ),
-       [],
        (99...102),
        (106...107),
        (110...111),
@@ -170,31 +180,33 @@ ProgramNode(0...278)(
          0,
          "obj"
        ),
-       ParametersNode(141...142)(
-         [RequiredParameterNode(141...142)(:x)],
-         [],
-         [],
-         nil,
-         [],
-         nil,
-         nil
+       ScopeNode(129...152)(
+         ParametersNode(141...142)(
+           [RequiredParameterNode(141...142)(:x)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
+         StatementsNode(146...152)(
+           [CallNode(146...152)(
+              nil,
+              nil,
+              (146...150),
+              nil,
+              ArgumentsNode(151...152)(
+                [LocalVariableReadNode(151...152)(:x, 0)]
+              ),
+              nil,
+              nil,
+              0,
+              "puts"
+            )]
+         ),
+         [:x]
        ),
-       StatementsNode(146...152)(
-         [CallNode(146...152)(
-            nil,
-            nil,
-            (146...150),
-            nil,
-            ArgumentsNode(151...152)(
-              [LocalVariableReadNode(151...152)(:x, 0)]
-            ),
-            nil,
-            nil,
-            0,
-            "puts"
-          )]
-       ),
-       [:x],
        (129...132),
        (136...137),
        (140...141),
@@ -205,51 +217,58 @@ ProgramNode(0...278)(
      DefNode(154...214)(
        (158...165),
        nil,
-       ParametersNode(166...167)(
-         [RequiredParameterNode(166...167)(:x)],
-         [],
-         [],
-         nil,
-         [],
-         nil,
-         nil
-       ),
-       StatementsNode(171...214)(
-         [CallNode(171...214)(
-            nil,
-            nil,
-            (171...176),
-            nil,
-            ArgumentsNode(177...214)(
-              [RescueModifierNode(177...214)(
-                 StringNode(177...191)(
-                   (177...178),
-                   (178...190),
-                   (190...191),
-                   "to be caught"
-                 ),
-                 (192...198),
-                 InterpolatedStringNode(199...214)(
-                   (199...200),
-                   [StringNode(200...209)(nil, (200...209), nil, "instance "),
-                    EmbeddedStatementsNode(209...213)(
-                      (209...211),
-                      StatementsNode(211...212)(
-                        [LocalVariableReadNode(211...212)(:x, 0)]
+       ScopeNode(154...214)(
+         ParametersNode(166...167)(
+           [RequiredParameterNode(166...167)(:x)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
+         StatementsNode(171...214)(
+           [CallNode(171...214)(
+              nil,
+              nil,
+              (171...176),
+              nil,
+              ArgumentsNode(177...214)(
+                [RescueModifierNode(177...214)(
+                   StringNode(177...191)(
+                     (177...178),
+                     (178...190),
+                     (190...191),
+                     "to be caught"
+                   ),
+                   (192...198),
+                   InterpolatedStringNode(199...214)(
+                     (199...200),
+                     [StringNode(200...209)(
+                        nil,
+                        (200...209),
+                        nil,
+                        "instance "
                       ),
-                      (212...213)
-                    )],
-                   (213...214)
-                 )
-               )]
-            ),
-            nil,
-            nil,
-            0,
-            "raise"
-          )]
+                      EmbeddedStatementsNode(209...213)(
+                        (209...211),
+                        StatementsNode(211...212)(
+                          [LocalVariableReadNode(211...212)(:x, 0)]
+                        ),
+                        (212...213)
+                      )],
+                     (213...214)
+                   )
+                 )]
+              ),
+              nil,
+              nil,
+              0,
+              "raise"
+            )]
+         ),
+         [:x]
        ),
-       [:x],
        (154...157),
        nil,
        (165...166),
@@ -260,51 +279,53 @@ ProgramNode(0...278)(
      DefNode(216...278)(
        (225...232),
        SelfNode(220...224)(),
-       ParametersNode(233...234)(
-         [RequiredParameterNode(233...234)(:x)],
-         [],
-         [],
-         nil,
-         [],
-         nil,
-         nil
+       ScopeNode(216...278)(
+         ParametersNode(233...234)(
+           [RequiredParameterNode(233...234)(:x)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
+         StatementsNode(238...278)(
+           [CallNode(238...278)(
+              nil,
+              nil,
+              (238...243),
+              nil,
+              ArgumentsNode(244...278)(
+                [RescueModifierNode(244...278)(
+                   StringNode(244...258)(
+                     (244...245),
+                     (245...257),
+                     (257...258),
+                     "to be caught"
+                   ),
+                   (259...265),
+                   InterpolatedStringNode(266...278)(
+                     (266...267),
+                     [StringNode(267...273)(nil, (267...273), nil, "class "),
+                      EmbeddedStatementsNode(273...277)(
+                        (273...275),
+                        StatementsNode(275...276)(
+                          [LocalVariableReadNode(275...276)(:x, 0)]
+                        ),
+                        (276...277)
+                      )],
+                     (277...278)
+                   )
+                 )]
+              ),
+              nil,
+              nil,
+              0,
+              "raise"
+            )]
+         ),
+         [:x]
        ),
-       StatementsNode(238...278)(
-         [CallNode(238...278)(
-            nil,
-            nil,
-            (238...243),
-            nil,
-            ArgumentsNode(244...278)(
-              [RescueModifierNode(244...278)(
-                 StringNode(244...258)(
-                   (244...245),
-                   (245...257),
-                   (257...258),
-                   "to be caught"
-                 ),
-                 (259...265),
-                 InterpolatedStringNode(266...278)(
-                   (266...267),
-                   [StringNode(267...273)(nil, (267...273), nil, "class "),
-                    EmbeddedStatementsNode(273...277)(
-                      (273...275),
-                      StatementsNode(275...276)(
-                        [LocalVariableReadNode(275...276)(:x, 0)]
-                      ),
-                      (276...277)
-                    )],
-                   (277...278)
-                 )
-               )]
-            ),
-            nil,
-            nil,
-            0,
-            "raise"
-          )]
-       ),
-       [:x],
        (216...219),
        (224...225),
        (232...233),

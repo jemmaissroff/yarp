@@ -11,9 +11,7 @@ ProgramNode(19...71)(
          [DefNode(40...67)(
             (44...48),
             nil,
-            nil,
-            nil,
-            [],
+            ScopeNode(40...67)(nil, nil, []),
             (40...43),
             nil,
             nil,

@@ -79,20 +79,22 @@ ProgramNode(0...159)(
             nil,
             nil,
             BlockNode(74...83)(
-              [],
-              nil,
-              StatementsNode(78...81)(
-                [CallNode(78...81)(
-                   nil,
-                   nil,
-                   (78...81),
-                   nil,
-                   nil,
-                   nil,
-                   nil,
-                   0,
-                   "foo"
-                 )]
+              ScopeNode(74...83)(
+                nil,
+                StatementsNode(78...81)(
+                  [CallNode(78...81)(
+                     nil,
+                     nil,
+                     (78...81),
+                     nil,
+                     nil,
+                     nil,
+                     nil,
+                     0,
+                     "foo"
+                   )]
+                ),
+                []
               ),
               (74...75),
               (82...83)
@@ -106,20 +108,22 @@ ProgramNode(0...159)(
      ),
      ForwardingSuperNode(85...100)(
        BlockNode(91...100)(
-         [],
-         nil,
-         StatementsNode(95...98)(
-           [CallNode(95...98)(
-              nil,
-              nil,
-              (95...98),
-              nil,
-              nil,
-              nil,
-              nil,
-              0,
-              "foo"
-            )]
+         ScopeNode(91...100)(
+           nil,
+           StatementsNode(95...98)(
+             [CallNode(95...98)(
+                nil,
+                nil,
+                (95...98),
+                nil,
+                nil,
+                nil,
+                nil,
+                0,
+                "foo"
+              )]
+           ),
+           []
          ),
          (91...92),
          (99...100)
@@ -143,20 +147,22 @@ ProgramNode(0...159)(
        ),
        (108...109),
        BlockNode(110...119)(
-         [],
-         nil,
-         StatementsNode(114...117)(
-           [CallNode(114...117)(
-              nil,
-              nil,
-              (114...117),
-              nil,
-              nil,
-              nil,
-              nil,
-              0,
-              "foo"
-            )]
+         ScopeNode(110...119)(
+           nil,
+           StatementsNode(114...117)(
+             [CallNode(114...117)(
+                nil,
+                nil,
+                (114...117),
+                nil,
+                nil,
+                nil,
+                nil,
+                0,
+                "foo"
+              )]
+           ),
+           []
          ),
          (110...111),
          (118...119)
@@ -168,20 +174,22 @@ ProgramNode(0...159)(
        nil,
        (126...127),
        BlockNode(128...137)(
-         [],
-         nil,
-         StatementsNode(132...135)(
-           [CallNode(132...135)(
-              nil,
-              nil,
-              (132...135),
-              nil,
-              nil,
-              nil,
-              nil,
-              0,
-              "foo"
-            )]
+         ScopeNode(128...137)(
+           nil,
+           StatementsNode(132...135)(
+             [CallNode(132...135)(
+                nil,
+                nil,
+                (132...135),
+                nil,
+                nil,
+                nil,
+                nil,
+                0,
+                "foo"
+              )]
+           ),
+           []
          ),
          (128...129),
          (136...137)
@@ -216,20 +224,22 @@ ProgramNode(0...159)(
        ),
        (148...149),
        BlockNode(150...159)(
-         [],
-         nil,
-         StatementsNode(154...157)(
-           [CallNode(154...157)(
-              nil,
-              nil,
-              (154...157),
-              nil,
-              nil,
-              nil,
-              nil,
-              0,
-              "foo"
-            )]
+         ScopeNode(150...159)(
+           nil,
+           StatementsNode(154...157)(
+             [CallNode(154...157)(
+                nil,
+                nil,
+                (154...157),
+                nil,
+                nil,
+                nil,
+                nil,
+                0,
+                "foo"
+              )]
+           ),
+           []
          ),
          (150...151),
          (158...159)

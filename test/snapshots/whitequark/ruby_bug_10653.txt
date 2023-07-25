@@ -12,7 +12,11 @@ ProgramNode(0...93)(
             nil,
             nil,
             nil,
-            BlockNode(14...20)([], nil, nil, (14...16), (17...20)),
+            BlockNode(14...20)(
+              ScopeNode(14...20)(nil, nil, []),
+              (14...16),
+              (17...20)
+            ),
             0,
             "raise"
           )]
@@ -27,7 +31,11 @@ ProgramNode(0...93)(
               nil,
               nil,
               nil,
-              BlockNode(27...33)([], nil, nil, (27...29), (30...33)),
+              BlockNode(27...33)(
+                ScopeNode(27...33)(nil, nil, []),
+                (27...29),
+                (30...33)
+              ),
               0,
               "tap"
             )]
@@ -47,7 +55,11 @@ ProgramNode(0...93)(
             nil,
             nil,
             nil,
-            BlockNode(49...51)([], nil, nil, (49...50), (50...51)),
+            BlockNode(49...51)(
+              ScopeNode(49...51)(nil, nil, []),
+              (49...50),
+              (50...51)
+            ),
             0,
             "raise"
           )]
@@ -62,7 +74,11 @@ ProgramNode(0...93)(
               nil,
               nil,
               nil,
-              BlockNode(58...60)([], nil, nil, (58...59), (59...60)),
+              BlockNode(58...60)(
+                ScopeNode(58...60)(nil, nil, []),
+                (58...59),
+                (59...60)
+              ),
               0,
               "tap"
             )]
@@ -83,35 +99,37 @@ ProgramNode(0...93)(
             nil,
             nil,
             BlockNode(75...89)(
-              [:n],
-              BlockParametersNode(78...81)(
-                ParametersNode(79...80)(
-                  [RequiredParameterNode(79...80)(:n)],
+              ScopeNode(75...89)(
+                BlockParametersNode(78...81)(
+                  ParametersNode(79...80)(
+                    [RequiredParameterNode(79...80)(:n)],
+                    [],
+                    [],
+                    nil,
+                    [],
+                    nil,
+                    nil
+                  ),
                   [],
-                  [],
-                  nil,
-                  [],
-                  nil,
-                  nil
+                  (78...79),
+                  (80...81)
                 ),
-                [],
-                (78...79),
-                (80...81)
-              ),
-              StatementsNode(82...85)(
-                [CallNode(82...85)(
-                   nil,
-                   nil,
-                   (82...83),
-                   nil,
-                   ArgumentsNode(84...85)(
-                     [LocalVariableReadNode(84...85)(:n, 0)]
-                   ),
-                   nil,
-                   nil,
-                   0,
-                   "p"
-                 )]
+                StatementsNode(82...85)(
+                  [CallNode(82...85)(
+                     nil,
+                     nil,
+                     (82...83),
+                     nil,
+                     ArgumentsNode(84...85)(
+                       [LocalVariableReadNode(84...85)(:n, 0)]
+                     ),
+                     nil,
+                     nil,
+                     0,
+                     "p"
+                   )]
+                ),
+                [:n]
               ),
               (75...77),
               (86...89)

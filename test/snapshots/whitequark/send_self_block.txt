@@ -8,7 +8,7 @@ ProgramNode(0...42)(
        nil,
        nil,
        nil,
-       BlockNode(4...10)([], nil, nil, (4...6), (7...10)),
+       BlockNode(4...10)(ScopeNode(4...10)(nil, nil, []), (4...6), (7...10)),
        0,
        "fun"
      ),
@@ -19,7 +19,11 @@ ProgramNode(0...42)(
        nil,
        nil,
        nil,
-       BlockNode(16...19)([], nil, nil, (16...17), (18...19)),
+       BlockNode(16...19)(
+         ScopeNode(16...19)(nil, nil, []),
+         (16...17),
+         (18...19)
+       ),
        0,
        "fun"
      ),
@@ -30,7 +34,11 @@ ProgramNode(0...42)(
        (24...25),
        nil,
        (25...26),
-       BlockNode(27...30)([], nil, nil, (27...28), (29...30)),
+       BlockNode(27...30)(
+         ScopeNode(27...30)(nil, nil, []),
+         (27...28),
+         (29...30)
+       ),
        0,
        "fun"
      ),
@@ -41,7 +49,11 @@ ProgramNode(0...42)(
        (35...36),
        ArgumentsNode(36...37)([IntegerNode(36...37)()]),
        (37...38),
-       BlockNode(39...42)([], nil, nil, (39...40), (41...42)),
+       BlockNode(39...42)(
+         ScopeNode(39...42)(nil, nil, []),
+         (39...40),
+         (41...42)
+       ),
        0,
        "fun"
      )]

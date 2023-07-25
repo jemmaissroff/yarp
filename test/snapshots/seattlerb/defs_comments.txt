@@ -4,9 +4,7 @@ ProgramNode(19...36)(
     [DefNode(19...36)(
        (28...32),
        SelfNode(23...27)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(19...36)(nil, nil, []),
        (19...22),
        (27...28),
        nil,

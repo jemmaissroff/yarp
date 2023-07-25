@@ -15,10 +15,22 @@ ProgramNode(0...12)(
        ),
        nil,
        BlockNode(9...12)(
-         [],
-         nil,
-         StatementsNode(10...11)(
-           [CallNode(10...11)(nil, nil, (10...11), nil, nil, nil, nil, 0, "c")]
+         ScopeNode(9...12)(
+           nil,
+           StatementsNode(10...11)(
+             [CallNode(10...11)(
+                nil,
+                nil,
+                (10...11),
+                nil,
+                nil,
+                nil,
+                nil,
+                0,
+                "c"
+              )]
+           ),
+           []
          ),
          (9...10),
          (11...12)

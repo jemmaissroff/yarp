@@ -8,7 +8,7 @@ ProgramNode(0...27)(
        nil,
        ArgumentsNode(2...4)([ArrayNode(2...4)([], (2...3), (3...4))]),
        nil,
-       BlockNode(5...11)([], nil, nil, (5...7), (8...11)),
+       BlockNode(5...11)(ScopeNode(5...11)(nil, nil, []), (5...7), (8...11)),
        0,
        "m"
      ),
@@ -21,7 +21,11 @@ ProgramNode(0...27)(
          [ArrayNode(15...17)([], (15...16), (16...17)), IntegerNode(19...20)()]
        ),
        nil,
-       BlockNode(21...27)([], nil, nil, (21...23), (24...27)),
+       BlockNode(21...27)(
+         ScopeNode(21...27)(nil, nil, []),
+         (21...23),
+         (24...27)
+       ),
        0,
        "m"
      )]

@@ -697,25 +697,27 @@ ProgramNode(0...916)(
        nil,
        nil,
        BlockNode(874...892)(
-         [],
-         nil,
-         StatementsNode(878...890)(
-           [InterpolatedStringNode(878...890)(
-              (878...879),
-              [EmbeddedStatementsNode(879...882)(
-                 (879...881),
-                 nil,
-                 (881...882)
-               ),
-               StringNode(882...883)(nil, (882...883), nil, "\n"),
-               EmbeddedStatementsNode(883...886)(
-                 (883...885),
-                 nil,
-                 (885...886)
-               ),
-               StringNode(886...889)(nil, (886...889), nil, "\n" + "a")],
-              (889...890)
-            )]
+         ScopeNode(874...892)(
+           nil,
+           StatementsNode(878...890)(
+             [InterpolatedStringNode(878...890)(
+                (878...879),
+                [EmbeddedStatementsNode(879...882)(
+                   (879...881),
+                   nil,
+                   (881...882)
+                 ),
+                 StringNode(882...883)(nil, (882...883), nil, "\n"),
+                 EmbeddedStatementsNode(883...886)(
+                   (883...885),
+                   nil,
+                   (885...886)
+                 ),
+                 StringNode(886...889)(nil, (886...889), nil, "\n" + "a")],
+                (889...890)
+              )]
+           ),
+           []
          ),
          (874...875),
          (891...892)

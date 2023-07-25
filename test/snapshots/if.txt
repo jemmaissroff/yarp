@@ -238,22 +238,24 @@ ProgramNode(0...382)(
             nil,
             nil,
             BlockNode(309...321)(
-              [:_],
-              BlockParametersNode(312...315)(
-                ParametersNode(313...314)(
-                  [RequiredParameterNode(313...314)(:_)],
+              ScopeNode(309...321)(
+                BlockParametersNode(312...315)(
+                  ParametersNode(313...314)(
+                    [RequiredParameterNode(313...314)(:_)],
+                    [],
+                    [],
+                    nil,
+                    [],
+                    nil,
+                    nil
+                  ),
                   [],
-                  [],
-                  nil,
-                  [],
-                  nil,
-                  nil
+                  (312...313),
+                  (314...315)
                 ),
-                [],
-                (312...313),
-                (314...315)
+                nil,
+                [:_]
               ),
-              nil,
               (309...311),
               (318...321)
             ),
@@ -273,22 +275,24 @@ ProgramNode(0...382)(
               nil,
               nil,
               BlockNode(339...351)(
-                [:_],
-                BlockParametersNode(342...345)(
-                  ParametersNode(343...344)(
-                    [RequiredParameterNode(343...344)(:_)],
+                ScopeNode(339...351)(
+                  BlockParametersNode(342...345)(
+                    ParametersNode(343...344)(
+                      [RequiredParameterNode(343...344)(:_)],
+                      [],
+                      [],
+                      nil,
+                      [],
+                      nil,
+                      nil
+                    ),
                     [],
-                    [],
-                    nil,
-                    [],
-                    nil,
-                    nil
+                    (342...343),
+                    (344...345)
                   ),
-                  [],
-                  (342...343),
-                  (344...345)
+                  nil,
+                  [:_]
                 ),
-                nil,
                 (339...341),
                 (348...351)
               ),
@@ -307,22 +311,24 @@ ProgramNode(0...382)(
                 nil,
                 nil,
                 BlockNode(366...378)(
-                  [:_],
-                  BlockParametersNode(369...372)(
-                    ParametersNode(370...371)(
-                      [RequiredParameterNode(370...371)(:_)],
+                  ScopeNode(366...378)(
+                    BlockParametersNode(369...372)(
+                      ParametersNode(370...371)(
+                        [RequiredParameterNode(370...371)(:_)],
+                        [],
+                        [],
+                        nil,
+                        [],
+                        nil,
+                        nil
+                      ),
                       [],
-                      [],
-                      nil,
-                      [],
-                      nil,
-                      nil
+                      (369...370),
+                      (371...372)
                     ),
-                    [],
-                    (369...370),
-                    (371...372)
+                    nil,
+                    [:_]
                   ),
-                  nil,
                   (366...368),
                   (375...378)
                 ),

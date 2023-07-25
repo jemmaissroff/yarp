@@ -319,7 +319,7 @@ module YARP
 
     def test_ForwardingParameterNode
       assert_location(ForwardingParameterNode, "def foo(...); end", 8...11) do |node|
-        node.parameters.keyword_rest
+        node.scope.parameters.keyword_rest
       end
     end
 
@@ -428,21 +428,21 @@ module YARP
 
     def test_KeywordParameterNode
       assert_location(KeywordParameterNode, "def foo(bar:); end", 8...12) do |node|
-        node.parameters.keywords.first
+        node.scope.parameters.keywords.first
       end
 
       assert_location(KeywordParameterNode, "def foo(bar: nil); end", 8...16) do |node|
-        node.parameters.keywords.first
+        node.scope.parameters.keywords.first
       end
     end
 
     def test_KeywordRestParameterNode
       assert_location(KeywordRestParameterNode, "def foo(**); end", 8...10) do |node|
-        node.parameters.keyword_rest
+        node.scope.parameters.keyword_rest
       end
 
       assert_location(KeywordRestParameterNode, "def foo(**bar); end", 8...13) do |node|
-        node.parameters.keyword_rest
+        node.scope.parameters.keyword_rest
       end
     end
 
@@ -511,7 +511,7 @@ module YARP
 
     def test_OptionalParameterNode
       assert_location(OptionalParameterNode, "def foo(bar = nil); end", 8...17) do |node|
-        node.parameters.optionals.first
+        node.scope.parameters.optionals.first
       end
     end
 
@@ -575,13 +575,13 @@ module YARP
 
     def test_RequiredParameterNode
       assert_location(RequiredParameterNode, "def foo(bar); end", 8...11) do |node|
-        node.parameters.requireds.first
+        node.scope.parameters.requireds.first
       end
     end
 
     def test_RequiredDestructuredParameterNode
       assert_location(RequiredDestructuredParameterNode, "def foo((bar)); end", 8...13) do |node|
-        node.parameters.requireds.first
+        node.scope.parameters.requireds.first
       end
     end
 
@@ -603,7 +603,7 @@ module YARP
 
     def test_RestParameterNode
       assert_location(RestParameterNode, "def foo(*bar); end", 8...12) do |node|
-        node.parameters.rest
+        node.scope.parameters.rest
       end
     end
 
@@ -643,7 +643,7 @@ module YARP
     end
 
     def test_StatementsNode
-      assert_location(StatementsNode, "foo { 1 }", 6...7) { |node| node.block.statements }
+      assert_location(StatementsNode, "foo { 1 }", 6...7) { |node| node.block.scope.statements }
 
       assert_location(StatementsNode, "(1)", 1...2, &:statements)
 

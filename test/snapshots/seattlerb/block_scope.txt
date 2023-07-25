@@ -9,9 +9,11 @@ ProgramNode(0...10)(
        nil,
        nil,
        BlockNode(2...10)(
-         [:b],
-         BlockParametersNode(4...8)(nil, [(6...7)], (4...5), (7...8)),
-         nil,
+         ScopeNode(2...10)(
+           BlockParametersNode(4...8)(nil, [(6...7)], (4...5), (7...8)),
+           nil,
+           [:b]
+         ),
          (2...3),
          (9...10)
        ),

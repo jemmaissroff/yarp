@@ -27,7 +27,11 @@ ProgramNode(0...16)(
        nil,
        nil,
        nil,
-       BlockNode(10...16)([], nil, nil, (10...12), (13...16)),
+       BlockNode(10...16)(
+         ScopeNode(10...16)(nil, nil, []),
+         (10...12),
+         (13...16)
+       ),
        0,
        "d"
      )]

@@ -4,21 +4,23 @@ ProgramNode(0...19)(
     [DefNode(0...19)(
        (4...8),
        nil,
-       nil,
-       StatementsNode(13...19)(
-         [CallNode(13...19)(
-            nil,
-            nil,
-            (13...19),
-            nil,
-            nil,
-            nil,
-            nil,
-            0,
-            "system"
-          )]
+       ScopeNode(0...19)(
+         nil,
+         StatementsNode(13...19)(
+           [CallNode(13...19)(
+              nil,
+              nil,
+              (13...19),
+              nil,
+              nil,
+              nil,
+              nil,
+              0,
+              "system"
+            )]
+         ),
+         []
        ),
-       [],
        (0...3),
        nil,
        (8...9),

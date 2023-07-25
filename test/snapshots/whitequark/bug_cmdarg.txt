@@ -53,22 +53,28 @@ ProgramNode(0...56)(
             [AssocNode(32...56)(
                SymbolNode(32...34)(nil, (32...33), (33...34), "x"),
                LambdaNode(35...56)(
-                 [],
-                 (35...37),
-                 nil,
-                 StatementsNode(41...52)(
-                   [CallNode(41...52)(
-                      nil,
-                      nil,
-                      (41...45),
-                      nil,
-                      nil,
-                      nil,
-                      BlockNode(46...52)([], nil, nil, (46...48), (49...52)),
-                      0,
-                      "meth"
-                    )]
-                 )
+                 ScopeNode(35...56)(
+                   nil,
+                   StatementsNode(41...52)(
+                     [CallNode(41...52)(
+                        nil,
+                        nil,
+                        (41...45),
+                        nil,
+                        nil,
+                        nil,
+                        BlockNode(46...52)(
+                          ScopeNode(46...52)(nil, nil, []),
+                          (46...48),
+                          (49...52)
+                        ),
+                        0,
+                        "meth"
+                      )]
+                   ),
+                   []
+                 ),
+                 (35...37)
                ),
                nil
              )]

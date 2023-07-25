@@ -505,13 +505,9 @@ nodes:
           ^^^^^^^^^^
   - name: BlockNode
     child_nodes:
-      - name: locals
-        type: constant[]
-      - name: parameters
-        type: node?
-        kind: BlockParametersNode
-      - name: statements
-        type: node?
+      - name: scope
+        type: node
+        kind: ScopeNode
       - name: opening_loc
         type: location
       - name: closing_loc
@@ -891,13 +887,9 @@ nodes:
         type: location
       - name: receiver
         type: node?
-      - name: parameters
-        type: node?
-        kind: ParametersNode
-      - name: statements
-        type: node?
-      - name: locals
-        type: constant[]
+      - name: scope
+        type: node
+        kind: ScopeNode
       - name: def_keyword_loc
         type: location
       - name: operator_loc
@@ -1376,15 +1368,11 @@ nodes:
           end
   - name: LambdaNode
     child_nodes:
-      - name: locals
-        type: constant[]
+      - name: scope
+        type: node
+        kind: ScopeNode
       - name: opening_loc
         type: location
-      - name: parameters
-        type: node?
-        kind: BlockParametersNode
-      - name: statements
-        type: node?
     comment: |
       Represents using a lambda literal (not the lambda method call).
 
@@ -1847,6 +1835,22 @@ nodes:
 
           return 1
           ^^^^^^^^
+  - name: ScopeNode
+    child_nodes:
+      - name: parameters
+        type: node?
+        kind: ParametersNode
+      - name: statements
+        type: node?
+        kind: StatementsNode
+      - name: locals
+        type: constant[]
+    comment: |
+      Represents a method definition.
+
+          def method
+          end
+          ^^^^^^^^^^
   - name: SelfNode
     comment: |
       Represents the `self` keyword.

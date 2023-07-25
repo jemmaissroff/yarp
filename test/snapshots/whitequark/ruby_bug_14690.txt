@@ -9,32 +9,38 @@ ProgramNode(0...23)(
        ArgumentsNode(4...6)([ParenthesesNode(4...6)(nil, (4...5), (5...6))]),
        nil,
        BlockNode(7...23)(
-         [],
-         nil,
-         StatementsNode(9...21)(
-           [CallNode(9...21)(
-              nil,
-              nil,
-              (9...10),
-              (10...11),
-              ArgumentsNode(11...12)(
-                [CallNode(11...12)(
-                   nil,
-                   nil,
-                   (11...12),
-                   nil,
-                   nil,
-                   nil,
-                   nil,
-                   0,
-                   "a"
-                 )]
-              ),
-              (12...13),
-              BlockNode(14...21)([], nil, nil, (14...16), (18...21)),
-              0,
-              "m"
-            )]
+         ScopeNode(7...23)(
+           nil,
+           StatementsNode(9...21)(
+             [CallNode(9...21)(
+                nil,
+                nil,
+                (9...10),
+                (10...11),
+                ArgumentsNode(11...12)(
+                  [CallNode(11...12)(
+                     nil,
+                     nil,
+                     (11...12),
+                     nil,
+                     nil,
+                     nil,
+                     nil,
+                     0,
+                     "a"
+                   )]
+                ),
+                (12...13),
+                BlockNode(14...21)(
+                  ScopeNode(14...21)(nil, nil, []),
+                  (14...16),
+                  (18...21)
+                ),
+                0,
+                "m"
+              )]
+           ),
+           []
          ),
          (7...8),
          (22...23)

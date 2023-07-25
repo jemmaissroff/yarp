@@ -4,22 +4,24 @@ ProgramNode(0...1194)(
     [DefNode(0...23)(
        (4...7),
        nil,
-       ParametersNode(8...18)(
-         [RequiredDestructuredParameterNode(8...18)(
-            [RequiredParameterNode(9...12)(:bar),
-             RequiredParameterNode(14...17)(:baz)],
-            (8...9),
-            (17...18)
-          )],
-         [],
-         [],
+       ScopeNode(0...23)(
+         ParametersNode(8...18)(
+           [RequiredDestructuredParameterNode(8...18)(
+              [RequiredParameterNode(9...12)(:bar),
+               RequiredParameterNode(14...17)(:baz)],
+              (8...9),
+              (17...18)
+            )],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:bar, :baz]
        ),
-       nil,
-       [:bar, :baz],
        (0...3),
        nil,
        (7...8),
@@ -30,32 +32,34 @@ ProgramNode(0...1194)(
      DefNode(25...74)(
        (29...32),
        nil,
-       ParametersNode(33...69)(
-         [RequiredDestructuredParameterNode(33...43)(
-            [RequiredParameterNode(34...37)(:bar),
-             RequiredParameterNode(39...42)(:baz)],
-            (33...34),
-            (42...43)
-          )],
-         [OptionalParameterNode(45...57)(
-            :optional,
-            (45...53),
-            (54...55),
-            IntegerNode(56...57)()
-          )],
-         [RequiredDestructuredParameterNode(59...69)(
-            [RequiredParameterNode(60...63)(:bin),
-             RequiredParameterNode(65...68)(:bag)],
-            (59...60),
-            (68...69)
-          )],
+       ScopeNode(25...74)(
+         ParametersNode(33...69)(
+           [RequiredDestructuredParameterNode(33...43)(
+              [RequiredParameterNode(34...37)(:bar),
+               RequiredParameterNode(39...42)(:baz)],
+              (33...34),
+              (42...43)
+            )],
+           [OptionalParameterNode(45...57)(
+              :optional,
+              (45...53),
+              (54...55),
+              IntegerNode(56...57)()
+            )],
+           [RequiredDestructuredParameterNode(59...69)(
+              [RequiredParameterNode(60...63)(:bin),
+               RequiredParameterNode(65...68)(:bag)],
+              (59...60),
+              (68...69)
+            )],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:bar, :baz, :optional, :bin, :bag]
        ),
-       nil,
-       [:bar, :baz, :optional, :bin, :bag],
        (25...28),
        nil,
        (32...33),
@@ -66,16 +70,18 @@ ProgramNode(0...1194)(
      DefNode(77...95)(
        (81...82),
        nil,
-       nil,
-       BeginNode(84...95)(
+       ScopeNode(77...95)(
          nil,
-         nil,
-         nil,
-         nil,
-         EnsureNode(84...95)((84...90), nil, (92...95)),
-         (92...95)
+         BeginNode(84...95)(
+           nil,
+           nil,
+           nil,
+           nil,
+           EnsureNode(84...95)((84...90), nil, (92...95)),
+           (92...95)
+         ),
+         []
        ),
-       [],
        (77...80),
        nil,
        nil,
@@ -100,9 +106,7 @@ ProgramNode(0...1194)(
          (101...102),
          (103...104)
        ),
-       nil,
-       nil,
-       [],
+       ScopeNode(97...110)(nil, nil, []),
        (97...100),
        (104...105),
        nil,
@@ -127,9 +131,7 @@ ProgramNode(0...1194)(
          (116...117),
          (118...119)
        ),
-       nil,
-       nil,
-       [],
+       ScopeNode(112...126)(nil, nil, []),
        (112...115),
        (119...121),
        nil,
@@ -140,9 +142,7 @@ ProgramNode(0...1194)(
      DefNode(128...143)(
        (138...139),
        FalseNode(132...137)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(128...143)(nil, nil, []),
        (128...131),
        (137...138),
        nil,
@@ -153,17 +153,19 @@ ProgramNode(0...1194)(
      DefNode(145...159)(
        (149...150),
        nil,
-       ParametersNode(151...154)(
-         [],
-         [],
-         [],
+       ScopeNode(145...159)(
+         ParametersNode(151...154)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           ForwardingParameterNode(151...154)(),
+           nil
+         ),
          nil,
-         [],
-         ForwardingParameterNode(151...154)(),
-         nil
+         [:"..."]
        ),
-       nil,
-       [:"..."],
        (145...148),
        nil,
        (150...151),
@@ -174,9 +176,7 @@ ProgramNode(0...1194)(
      DefNode(161...175)(
        (170...171),
        GlobalVariableReadNode(165...169)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(161...175)(nil, nil, []),
        (161...164),
        (169...170),
        nil,
@@ -187,9 +187,7 @@ ProgramNode(0...1194)(
      DefNode(177...188)(
        (183...184),
        CallNode(181...182)(nil, nil, (181...182), nil, nil, nil, nil, 0, "a"),
-       nil,
-       nil,
-       [],
+       ScopeNode(177...188)(nil, nil, []),
        (177...180),
        (182...183),
        nil,
@@ -200,9 +198,7 @@ ProgramNode(0...1194)(
      DefNode(190...204)(
        (199...200),
        InstanceVariableReadNode(194...198)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(190...204)(nil, nil, []),
        (190...193),
        (198...199),
        nil,
@@ -213,17 +209,19 @@ ProgramNode(0...1194)(
      DefNode(206...219)(
        (210...211),
        nil,
-       ParametersNode(212...214)(
-         [],
-         [],
-         [],
+       ScopeNode(206...219)(
+         ParametersNode(212...214)(
+           [],
+           [],
+           [],
+           nil,
+           [KeywordParameterNode(212...214)((212...214), nil)],
+           nil,
+           nil
+         ),
          nil,
-         [KeywordParameterNode(212...214)((212...214), nil)],
-         nil,
-         nil
+         [:b]
        ),
-       nil,
-       [:b],
        (206...209),
        nil,
        nil,
@@ -235,17 +233,19 @@ ProgramNode(0...1194)(
      DefNode(229...242)(
        (233...234),
        nil,
-       ParametersNode(235...237)(
-         [],
-         [],
-         [],
+       ScopeNode(229...242)(
+         ParametersNode(235...237)(
+           [],
+           [],
+           [],
+           nil,
+           [KeywordParameterNode(235...237)((235...237), nil)],
+           nil,
+           nil
+         ),
          nil,
-         [KeywordParameterNode(235...237)((235...237), nil)],
-         nil,
-         nil
+         [:b]
        ),
-       nil,
-       [:b],
        (229...232),
        nil,
        (234...235),
@@ -256,17 +256,19 @@ ProgramNode(0...1194)(
      DefNode(244...258)(
        (248...249),
        nil,
-       ParametersNode(250...253)(
-         [],
-         [],
-         [],
+       ScopeNode(244...258)(
+         ParametersNode(250...253)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           KeywordRestParameterNode(250...253)((250...252), (252...253)),
+           nil
+         ),
          nil,
-         [],
-         KeywordRestParameterNode(250...253)((250...252), (252...253)),
-         nil
+         [:b]
        ),
-       nil,
-       [:b],
        (244...247),
        nil,
        (249...250),
@@ -277,17 +279,19 @@ ProgramNode(0...1194)(
      DefNode(260...273)(
        (264...265),
        nil,
-       ParametersNode(266...268)(
-         [],
-         [],
-         [],
+       ScopeNode(260...273)(
+         ParametersNode(266...268)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           KeywordRestParameterNode(266...268)((266...268), nil),
+           nil
+         ),
          nil,
-         [],
-         KeywordRestParameterNode(266...268)((266...268), nil),
-         nil
+         [:**]
        ),
-       nil,
-       [:**],
        (260...263),
        nil,
        (265...266),
@@ -305,9 +309,7 @@ ProgramNode(0...1194)(
      DefNode(282...291)(
        (286...287),
        nil,
-       nil,
-       nil,
-       [],
+       ScopeNode(282...291)(nil, nil, []),
        (282...285),
        nil,
        nil,
@@ -318,19 +320,21 @@ ProgramNode(0...1194)(
      DefNode(293...310)(
        (297...298),
        nil,
-       ParametersNode(299...306)(
-         [RequiredParameterNode(299...300)(:b),
-          RequiredParameterNode(302...303)(:c),
-          RequiredParameterNode(305...306)(:d)],
-         [],
-         [],
+       ScopeNode(293...310)(
+         ParametersNode(299...306)(
+           [RequiredParameterNode(299...300)(:b),
+            RequiredParameterNode(302...303)(:c),
+            RequiredParameterNode(305...306)(:d)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:b, :c, :d]
        ),
-       nil,
-       [:b, :c, :d],
        (293...296),
        nil,
        nil,
@@ -341,9 +345,7 @@ ProgramNode(0...1194)(
      DefNode(312...325)(
        (320...321),
        NilNode(316...319)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(312...325)(nil, nil, []),
        (312...315),
        (319...320),
        nil,
@@ -354,21 +356,23 @@ ProgramNode(0...1194)(
      DefNode(327...345)(
        (331...332),
        nil,
-       ParametersNode(333...341)(
-         [],
-         [],
-         [],
+       ScopeNode(327...345)(
+         ParametersNode(333...341)(
+           [],
+           [],
+           [],
+           nil,
+           [KeywordParameterNode(333...335)((333...335), nil),
+            KeywordParameterNode(337...341)(
+              (337...339),
+              IntegerNode(340...341)()
+            )],
+           nil,
+           nil
+         ),
          nil,
-         [KeywordParameterNode(333...335)((333...335), nil),
-          KeywordParameterNode(337...341)(
-            (337...339),
-            IntegerNode(340...341)()
-          )],
-         nil,
-         nil
+         [:b, :c]
        ),
-       nil,
-       [:b, :c],
        (327...330),
        nil,
        nil,
@@ -379,21 +383,23 @@ ProgramNode(0...1194)(
      DefNode(347...366)(
        (351...352),
        nil,
-       ParametersNode(353...361)(
-         [],
-         [],
-         [],
+       ScopeNode(347...366)(
+         ParametersNode(353...361)(
+           [],
+           [],
+           [],
+           nil,
+           [KeywordParameterNode(353...355)((353...355), nil),
+            KeywordParameterNode(357...361)(
+              (357...359),
+              IntegerNode(360...361)()
+            )],
+           nil,
+           nil
+         ),
          nil,
-         [KeywordParameterNode(353...355)((353...355), nil),
-          KeywordParameterNode(357...361)(
-            (357...359),
-            IntegerNode(360...361)()
-          )],
-         nil,
-         nil
+         [:b, :c]
        ),
-       nil,
-       [:b, :c],
        (347...350),
        nil,
        (352...353),
@@ -404,21 +410,23 @@ ProgramNode(0...1194)(
      DefNode(368...389)(
        (372...373),
        nil,
-       ParametersNode(374...384)(
-         [],
-         [],
-         [],
+       ScopeNode(368...389)(
+         ParametersNode(374...384)(
+           [],
+           [],
+           [],
+           nil,
+           [KeywordParameterNode(374...380)(
+              (374...376),
+              IntegerNode(379...380)()
+            ),
+            KeywordParameterNode(382...384)((382...384), nil)],
+           nil,
+           nil
+         ),
          nil,
-         [KeywordParameterNode(374...380)(
-            (374...376),
-            IntegerNode(379...380)()
-          ),
-          KeywordParameterNode(382...384)((382...384), nil)],
-         nil,
-         nil
+         [:b, :c]
        ),
-       nil,
-       [:b, :c],
        (368...371),
        nil,
        (373...374),
@@ -430,28 +438,30 @@ ProgramNode(0...1194)(
      DefNode(399...421)(
        (403...404),
        nil,
-       ParametersNode(405...417)(
-         [],
-         [OptionalParameterNode(405...410)(
-            :b,
-            (405...406),
-            (407...408),
-            IntegerNode(409...410)()
-          ),
-          OptionalParameterNode(412...417)(
-            :c,
-            (412...413),
-            (414...415),
-            IntegerNode(416...417)()
-          )],
-         [],
+       ScopeNode(399...421)(
+         ParametersNode(405...417)(
+           [],
+           [OptionalParameterNode(405...410)(
+              :b,
+              (405...406),
+              (407...408),
+              IntegerNode(409...410)()
+            ),
+            OptionalParameterNode(412...417)(
+              :c,
+              (412...413),
+              (414...415),
+              IntegerNode(416...417)()
+            )],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:b, :c]
        ),
-       nil,
-       [:b, :c],
        (399...402),
        nil,
        nil,
@@ -462,9 +472,7 @@ ProgramNode(0...1194)(
      DefNode(423...434)(
        (427...428),
        nil,
-       nil,
-       nil,
-       [],
+       ScopeNode(423...434)(nil, nil, []),
        (423...426),
        nil,
        (428...429),
@@ -475,22 +483,24 @@ ProgramNode(0...1194)(
      DefNode(436...454)(
        (440...441),
        nil,
-       ParametersNode(442...450)(
-         [RequiredParameterNode(442...443)(:b)],
-         [OptionalParameterNode(445...450)(
-            :c,
-            (445...446),
-            (447...448),
-            IntegerNode(449...450)()
-          )],
-         [],
+       ScopeNode(436...454)(
+         ParametersNode(442...450)(
+           [RequiredParameterNode(442...443)(:b)],
+           [OptionalParameterNode(445...450)(
+              :c,
+              (445...446),
+              (447...448),
+              IntegerNode(449...450)()
+            )],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:b, :c]
        ),
-       nil,
-       [:b, :c],
        (436...439),
        nil,
        nil,
@@ -501,17 +511,19 @@ ProgramNode(0...1194)(
      DefNode(456...467)(
        (460...461),
        nil,
-       ParametersNode(462...463)(
-         [RequiredParameterNode(462...463)(:b)],
-         [],
-         [],
+       ScopeNode(456...467)(
+         ParametersNode(462...463)(
+           [RequiredParameterNode(462...463)(:b)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:b]
        ),
-       nil,
-       [:b],
        (456...459),
        nil,
        nil,
@@ -522,16 +534,18 @@ ProgramNode(0...1194)(
      DefNode(469...501)(
        (473...474),
        nil,
-       nil,
-       BeginNode(476...501)(
+       ScopeNode(469...501)(
          nil,
-         nil,
-         RescueNode(476...482)((476...482), [], nil, nil, nil, nil),
-         ElseNode(484...496)((484...488), nil, (490...496)),
-         EnsureNode(490...501)((490...496), nil, (498...501)),
-         (498...501)
+         BeginNode(476...501)(
+           nil,
+           nil,
+           RescueNode(476...482)((476...482), [], nil, nil, nil, nil),
+           ElseNode(484...496)((484...488), nil, (490...496)),
+           EnsureNode(490...501)((490...496), nil, (498...501)),
+           (498...501)
+         ),
+         []
        ),
-       [],
        (469...472),
        nil,
        nil,
@@ -542,17 +556,19 @@ ProgramNode(0...1194)(
      DefNode(503...515)(
        (507...508),
        nil,
-       ParametersNode(509...511)(
-         [],
-         [],
-         [],
-         RestParameterNode(509...511)((509...510), (510...511)),
-         [],
+       ScopeNode(503...515)(
+         ParametersNode(509...511)(
+           [],
+           [],
+           [],
+           RestParameterNode(509...511)((509...510), (510...511)),
+           [],
+           nil,
+           nil
+         ),
          nil,
-         nil
+         [:b]
        ),
-       nil,
-       [:b],
        (503...506),
        nil,
        nil,
@@ -563,17 +579,19 @@ ProgramNode(0...1194)(
      DefNode(517...529)(
        (521...522),
        nil,
-       ParametersNode(523...524)(
-         [],
-         [],
-         [],
-         RestParameterNode(523...524)((523...524), nil),
-         [],
+       ScopeNode(517...529)(
+         ParametersNode(523...524)(
+           [],
+           [],
+           [],
+           RestParameterNode(523...524)((523...524), nil),
+           [],
+           nil,
+           nil
+         ),
          nil,
-         nil
+         [:*]
        ),
-       nil,
-       [:*],
        (517...520),
        nil,
        (522...523),
@@ -584,17 +602,19 @@ ProgramNode(0...1194)(
      DefNode(531...546)(
        (535...536),
        nil,
-       nil,
-       StatementsNode(537...542)(
-         [LocalVariableWriteNode(537...542)(
-            :b,
-            0,
-            IntegerNode(541...542)(),
-            (537...538),
-            (539...540)
-          )]
+       ScopeNode(531...546)(
+         nil,
+         StatementsNode(537...542)(
+           [LocalVariableWriteNode(537...542)(
+              :b,
+              0,
+              IntegerNode(541...542)(),
+              (537...538),
+              (539...540)
+            )]
+         ),
+         [:b]
        ),
-       [:b],
        (531...534),
        nil,
        nil,
@@ -605,9 +625,7 @@ ProgramNode(0...1194)(
      DefNode(548...562)(
        (557...558),
        SelfNode(552...556)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(548...562)(nil, nil, []),
        (548...551),
        (556...557),
        nil,
@@ -618,9 +636,7 @@ ProgramNode(0...1194)(
      DefNode(564...578)(
        (573...574),
        TrueNode(568...572)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(564...578)(nil, nil, []),
        (564...567),
        (572...573),
        nil,
@@ -631,9 +647,7 @@ ProgramNode(0...1194)(
      DefNode(580...589)(
        (584...585),
        nil,
-       nil,
-       nil,
-       [],
+       ScopeNode(580...589)(nil, nil, []),
        (580...583),
        nil,
        nil,
@@ -644,25 +658,32 @@ ProgramNode(0...1194)(
      DefNode(591...625)(
        (595...597),
        nil,
-       nil,
-       StatementsNode(598...621)(
-         [IfNode(598...616)(
-            (609...611),
-            TrueNode(612...616)(),
-            StatementsNode(598...608)(
-              [ReturnNode(598...608)(
-                 (598...604),
-                 ArgumentsNode(605...608)(
-                   [SymbolNode(605...608)((605...606), (606...608), nil, "hi")]
-                 )
-               )]
+       ScopeNode(591...625)(
+         nil,
+         StatementsNode(598...621)(
+           [IfNode(598...616)(
+              (609...611),
+              TrueNode(612...616)(),
+              StatementsNode(598...608)(
+                [ReturnNode(598...608)(
+                   (598...604),
+                   ArgumentsNode(605...608)(
+                     [SymbolNode(605...608)(
+                        (605...606),
+                        (606...608),
+                        nil,
+                        "hi"
+                      )]
+                   )
+                 )]
+              ),
+              nil,
+              nil
             ),
-            nil,
-            nil
-          ),
-          SymbolNode(617...621)((617...618), (618...621), nil, "bye")]
+            SymbolNode(617...621)((617...618), (618...621), nil, "bye")]
+         ),
+         []
        ),
-       [],
        (591...594),
        nil,
        nil,
@@ -673,9 +694,11 @@ ProgramNode(0...1194)(
      DefNode(627...638)(
        (631...634),
        nil,
-       nil,
-       StatementsNode(637...638)([IntegerNode(637...638)()]),
-       [],
+       ScopeNode(627...638)(
+         nil,
+         StatementsNode(637...638)([IntegerNode(637...638)()]),
+         []
+       ),
        (627...630),
        nil,
        nil,
@@ -686,9 +709,11 @@ ProgramNode(0...1194)(
      DefNode(639...650)(
        (643...646),
        nil,
-       nil,
-       StatementsNode(649...650)([IntegerNode(649...650)()]),
-       [],
+       ScopeNode(639...650)(
+         nil,
+         StatementsNode(649...650)([IntegerNode(649...650)()]),
+         []
+       ),
        (639...642),
        nil,
        nil,
@@ -699,17 +724,19 @@ ProgramNode(0...1194)(
      DefNode(652...670)(
        (656...659),
        nil,
-       ParametersNode(660...663)(
-         [RequiredParameterNode(660...663)(:bar)],
-         [],
-         [],
-         nil,
-         [],
-         nil,
-         nil
+       ScopeNode(652...670)(
+         ParametersNode(660...663)(
+           [RequiredParameterNode(660...663)(:bar)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
+         StatementsNode(667...670)([IntegerNode(667...670)()]),
+         [:bar]
        ),
-       StatementsNode(667...670)([IntegerNode(667...670)()]),
-       [:bar],
        (652...655),
        nil,
        (659...660),
@@ -720,9 +747,11 @@ ProgramNode(0...1194)(
      DefNode(672...685)(
        (676...679),
        nil,
-       nil,
-       StatementsNode(682...685)([IntegerNode(682...685)()]),
-       [],
+       ScopeNode(672...685)(
+         nil,
+         StatementsNode(682...685)([IntegerNode(682...685)()]),
+         []
+       ),
        (672...675),
        nil,
        nil,
@@ -733,29 +762,33 @@ ProgramNode(0...1194)(
      DefNode(687...706)(
        (691...692),
        nil,
-       ParametersNode(693...694)(
-         [],
-         [],
-         [],
-         RestParameterNode(693...694)((693...694), nil),
-         [],
-         nil,
-         nil
+       ScopeNode(687...706)(
+         ParametersNode(693...694)(
+           [],
+           [],
+           [],
+           RestParameterNode(693...694)((693...694), nil),
+           [],
+           nil,
+           nil
+         ),
+         StatementsNode(697...701)(
+           [CallNode(697...701)(
+              nil,
+              nil,
+              (697...698),
+              (698...699),
+              ArgumentsNode(699...700)(
+                [SplatNode(699...700)((699...700), nil)]
+              ),
+              (700...701),
+              nil,
+              0,
+              "b"
+            )]
+         ),
+         [:*]
        ),
-       StatementsNode(697...701)(
-         [CallNode(697...701)(
-            nil,
-            nil,
-            (697...698),
-            (698...699),
-            ArgumentsNode(699...700)([SplatNode(699...700)((699...700), nil)]),
-            (700...701),
-            nil,
-            0,
-            "b"
-          )]
-       ),
-       [:*],
        (687...690),
        nil,
        (692...693),
@@ -766,29 +799,31 @@ ProgramNode(0...1194)(
      DefNode(708...731)(
        (712...713),
        nil,
-       ParametersNode(714...717)(
-         [],
-         [],
-         [],
-         nil,
-         [],
-         ForwardingParameterNode(714...717)(),
-         nil
+       ScopeNode(708...731)(
+         ParametersNode(714...717)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           ForwardingParameterNode(714...717)(),
+           nil
+         ),
+         StatementsNode(720...726)(
+           [CallNode(720...726)(
+              nil,
+              nil,
+              (720...721),
+              (721...722),
+              ArgumentsNode(722...725)([ForwardingArgumentsNode(722...725)()]),
+              (725...726),
+              nil,
+              0,
+              "b"
+            )]
+         ),
+         [:"..."]
        ),
-       StatementsNode(720...726)(
-         [CallNode(720...726)(
-            nil,
-            nil,
-            (720...721),
-            (721...722),
-            ArgumentsNode(722...725)([ForwardingArgumentsNode(722...725)()]),
-            (725...726),
-            nil,
-            0,
-            "b"
-          )]
-       ),
-       [:"..."],
        (708...711),
        nil,
        (713...714),
@@ -799,33 +834,35 @@ ProgramNode(0...1194)(
      DefNode(733...762)(
        (737...738),
        nil,
-       ParametersNode(739...742)(
-         [],
-         [],
-         [],
-         nil,
-         [],
-         ForwardingParameterNode(739...742)(),
-         nil
+       ScopeNode(733...762)(
+         ParametersNode(739...742)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           ForwardingParameterNode(739...742)(),
+           nil
+         ),
+         StatementsNode(745...757)(
+           [CallNode(745...757)(
+              nil,
+              nil,
+              (745...746),
+              (746...747),
+              ArgumentsNode(747...756)(
+                [IntegerNode(747...748)(),
+                 IntegerNode(750...751)(),
+                 ForwardingArgumentsNode(753...756)()]
+              ),
+              (756...757),
+              nil,
+              0,
+              "b"
+            )]
+         ),
+         [:"..."]
        ),
-       StatementsNode(745...757)(
-         [CallNode(745...757)(
-            nil,
-            nil,
-            (745...746),
-            (746...747),
-            ArgumentsNode(747...756)(
-              [IntegerNode(747...748)(),
-               IntegerNode(750...751)(),
-               ForwardingArgumentsNode(753...756)()]
-            ),
-            (756...757),
-            nil,
-            0,
-            "b"
-          )]
-       ),
-       [:"..."],
        (733...736),
        nil,
        (738...739),
@@ -856,9 +893,7 @@ ProgramNode(0...1194)(
          (768...769),
          (774...775)
        ),
-       nil,
-       nil,
-       [],
+       ScopeNode(764...781)(nil, nil, []),
        (764...767),
        (775...776),
        nil,
@@ -869,17 +904,19 @@ ProgramNode(0...1194)(
      DefNode(783...795)(
        (787...788),
        nil,
-       ParametersNode(789...791)(
-         [],
-         [],
-         [],
+       ScopeNode(783...795)(
+         ParametersNode(789...791)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           BlockParameterNode(789...791)((790...791), (789...790))
+         ),
          nil,
-         [],
-         nil,
-         BlockParameterNode(789...791)((790...791), (789...790))
+         [:b]
        ),
-       nil,
-       [:b],
        (783...786),
        nil,
        nil,
@@ -890,17 +927,19 @@ ProgramNode(0...1194)(
      DefNode(797...809)(
        (801...802),
        nil,
-       ParametersNode(803...804)(
-         [],
-         [],
-         [],
+       ScopeNode(797...809)(
+         ParametersNode(803...804)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           BlockParameterNode(803...804)(nil, (803...804))
+         ),
          nil,
-         [],
-         nil,
-         BlockParameterNode(803...804)(nil, (803...804))
+         [:&]
        ),
-       nil,
-       [:&],
        (797...800),
        nil,
        (802...803),
@@ -911,9 +950,7 @@ ProgramNode(0...1194)(
      DefNode(811...826)(
        (821...822),
        ClassVariableReadNode(815...820)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(811...826)(nil, nil, []),
        (811...814),
        (820...821),
        nil,
@@ -944,9 +981,7 @@ ProgramNode(0...1194)(
          (832...833),
          (838...839)
        ),
-       nil,
-       nil,
-       [],
+       ScopeNode(828...845)(nil, nil, []),
        (828...831),
        (839...840),
        nil,
@@ -957,9 +992,7 @@ ProgramNode(0...1194)(
      DefNode(847...875)(
        (856...870),
        SelfNode(851...855)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(847...875)(nil, nil, []),
        (847...850),
        (855...856),
        nil,
@@ -975,9 +1008,7 @@ ProgramNode(0...1194)(
      DefNode(888...903)(
        (898...899),
        ConstantReadNode(892...897)(),
-       nil,
-       nil,
-       [],
+       ScopeNode(888...903)(nil, nil, []),
        (888...891),
        (897...898),
        nil,
@@ -988,42 +1019,44 @@ ProgramNode(0...1194)(
      DefNode(905...936)(
        (909...910),
        nil,
-       ParametersNode(911...914)(
-         [],
-         [],
-         [],
-         nil,
-         [],
-         ForwardingParameterNode(911...914)(),
-         nil
+       ScopeNode(905...936)(
+         ParametersNode(911...914)(
+           [],
+           [],
+           [],
+           nil,
+           [],
+           ForwardingParameterNode(911...914)(),
+           nil
+         ),
+         StatementsNode(917...931)(
+           [InterpolatedStringNode(917...931)(
+              (917...918),
+              [StringNode(918...921)(nil, (918...921), nil, "foo"),
+               EmbeddedStatementsNode(921...930)(
+                 (921...923),
+                 StatementsNode(923...929)(
+                   [CallNode(923...929)(
+                      nil,
+                      nil,
+                      (923...924),
+                      (924...925),
+                      ArgumentsNode(925...928)(
+                        [ForwardingArgumentsNode(925...928)()]
+                      ),
+                      (928...929),
+                      nil,
+                      0,
+                      "b"
+                    )]
+                 ),
+                 (929...930)
+               )],
+              (930...931)
+            )]
+         ),
+         [:"..."]
        ),
-       StatementsNode(917...931)(
-         [InterpolatedStringNode(917...931)(
-            (917...918),
-            [StringNode(918...921)(nil, (918...921), nil, "foo"),
-             EmbeddedStatementsNode(921...930)(
-               (921...923),
-               StatementsNode(923...929)(
-                 [CallNode(923...929)(
-                    nil,
-                    nil,
-                    (923...924),
-                    (924...925),
-                    ArgumentsNode(925...928)(
-                      [ForwardingArgumentsNode(925...928)()]
-                    ),
-                    (928...929),
-                    nil,
-                    0,
-                    "b"
-                  )]
-               ),
-               (929...930)
-             )],
-            (930...931)
-          )]
-       ),
-       [:"..."],
        (905...908),
        nil,
        (910...911),
@@ -1034,66 +1067,68 @@ ProgramNode(0...1194)(
      DefNode(938...980)(
        (942...945),
        nil,
-       nil,
-       StatementsNode(948...976)(
-         [CallNode(948...976)(
-            HashNode(948...950)((948...949), [], (949...950)),
-            (950...951),
-            (951...956),
-            nil,
-            ArgumentsNode(957...976)(
-              [KeywordHashNode(957...976)(
-                 [AssocSplatNode(957...962)(
-                    CallNode(959...962)(
-                      nil,
-                      nil,
-                      (959...962),
-                      nil,
-                      nil,
-                      nil,
-                      nil,
-                      0,
-                      "bar"
+       ScopeNode(938...980)(
+         nil,
+         StatementsNode(948...976)(
+           [CallNode(948...976)(
+              HashNode(948...950)((948...949), [], (949...950)),
+              (950...951),
+              (951...956),
+              nil,
+              ArgumentsNode(957...976)(
+                [KeywordHashNode(957...976)(
+                   [AssocSplatNode(957...962)(
+                      CallNode(959...962)(
+                        nil,
+                        nil,
+                        (959...962),
+                        nil,
+                        nil,
+                        nil,
+                        nil,
+                        0,
+                        "bar"
+                      ),
+                      (957...959)
                     ),
-                    (957...959)
-                  ),
-                  AssocSplatNode(964...969)(
-                    CallNode(966...969)(
-                      nil,
-                      nil,
-                      (966...969),
-                      nil,
-                      nil,
-                      nil,
-                      nil,
-                      0,
-                      "baz"
+                    AssocSplatNode(964...969)(
+                      CallNode(966...969)(
+                        nil,
+                        nil,
+                        (966...969),
+                        nil,
+                        nil,
+                        nil,
+                        nil,
+                        0,
+                        "baz"
+                      ),
+                      (964...966)
                     ),
-                    (964...966)
-                  ),
-                  AssocSplatNode(971...976)(
-                    CallNode(973...976)(
-                      nil,
-                      nil,
-                      (973...976),
-                      nil,
-                      nil,
-                      nil,
-                      nil,
-                      0,
-                      "qux"
-                    ),
-                    (971...973)
-                  )]
-               )]
-            ),
-            nil,
-            nil,
-            0,
-            "merge"
-          )]
+                    AssocSplatNode(971...976)(
+                      CallNode(973...976)(
+                        nil,
+                        nil,
+                        (973...976),
+                        nil,
+                        nil,
+                        nil,
+                        nil,
+                        0,
+                        "qux"
+                      ),
+                      (971...973)
+                    )]
+                 )]
+              ),
+              nil,
+              nil,
+              0,
+              "merge"
+            )]
+         ),
+         []
        ),
-       [],
        (938...941),
        nil,
        nil,
@@ -1104,31 +1139,33 @@ ProgramNode(0...1194)(
      DefNode(982...1006)(
        (986...989),
        nil,
-       ParametersNode(990...1001)(
-         [],
-         [],
-         [],
+       ScopeNode(982...1006)(
+         ParametersNode(990...1001)(
+           [],
+           [],
+           [],
+           nil,
+           [KeywordParameterNode(990...1001)(
+              (990...992),
+              ParenthesesNode(993...1001)(
+                StatementsNode(994...1000)(
+                  [RangeNode(994...1000)(
+                     IntegerNode(994...995)(),
+                     IntegerNode(998...1000)(),
+                     (995...998),
+                     1
+                   )]
+                ),
+                (993...994),
+                (1000...1001)
+              )
+            )],
+           nil,
+           nil
+         ),
          nil,
-         [KeywordParameterNode(990...1001)(
-            (990...992),
-            ParenthesesNode(993...1001)(
-              StatementsNode(994...1000)(
-                [RangeNode(994...1000)(
-                   IntegerNode(994...995)(),
-                   IntegerNode(998...1000)(),
-                   (995...998),
-                   1
-                 )]
-              ),
-              (993...994),
-              (1000...1001)
-            )
-          )],
-         nil,
-         nil
+         [:a]
        ),
-       nil,
-       [:a],
        (982...985),
        nil,
        (989...990),
@@ -1139,31 +1176,33 @@ ProgramNode(0...1194)(
      DefNode(1008...1031)(
        (1012...1015),
        nil,
-       ParametersNode(1016...1026)(
-         [],
-         [],
-         [],
+       ScopeNode(1008...1031)(
+         ParametersNode(1016...1026)(
+           [],
+           [],
+           [],
+           nil,
+           [KeywordParameterNode(1016...1026)(
+              (1016...1018),
+              ParenthesesNode(1019...1026)(
+                StatementsNode(1020...1025)(
+                  [RangeNode(1020...1025)(
+                     nil,
+                     IntegerNode(1023...1025)(),
+                     (1020...1023),
+                     1
+                   )]
+                ),
+                (1019...1020),
+                (1025...1026)
+              )
+            )],
+           nil,
+           nil
+         ),
          nil,
-         [KeywordParameterNode(1016...1026)(
-            (1016...1018),
-            ParenthesesNode(1019...1026)(
-              StatementsNode(1020...1025)(
-                [RangeNode(1020...1025)(
-                   nil,
-                   IntegerNode(1023...1025)(),
-                   (1020...1023),
-                   1
-                 )]
-              ),
-              (1019...1020),
-              (1025...1026)
-            )
-          )],
-         nil,
-         nil
+         [:a]
        ),
-       nil,
-       [:a],
        (1008...1011),
        nil,
        (1015...1016),
@@ -1174,31 +1213,33 @@ ProgramNode(0...1194)(
      DefNode(1033...1055)(
        (1037...1040),
        nil,
-       ParametersNode(1041...1050)(
-         [],
-         [],
-         [],
+       ScopeNode(1033...1055)(
+         ParametersNode(1041...1050)(
+           [],
+           [],
+           [],
+           nil,
+           [KeywordParameterNode(1041...1050)(
+              (1041...1043),
+              ParenthesesNode(1044...1050)(
+                StatementsNode(1045...1049)(
+                  [RangeNode(1045...1049)(
+                     IntegerNode(1045...1046)(),
+                     nil,
+                     (1046...1049),
+                     1
+                   )]
+                ),
+                (1044...1045),
+                (1049...1050)
+              )
+            )],
+           nil,
+           nil
+         ),
          nil,
-         [KeywordParameterNode(1041...1050)(
-            (1041...1043),
-            ParenthesesNode(1044...1050)(
-              StatementsNode(1045...1049)(
-                [RangeNode(1045...1049)(
-                   IntegerNode(1045...1046)(),
-                   nil,
-                   (1046...1049),
-                   1
-                 )]
-              ),
-              (1044...1045),
-              (1049...1050)
-            )
-          )],
-         nil,
-         nil
+         [:a]
        ),
-       nil,
-       [:a],
        (1033...1036),
        nil,
        (1040...1041),
@@ -1209,33 +1250,35 @@ ProgramNode(0...1194)(
      DefNode(1057...1082)(
        (1061...1064),
        nil,
-       ParametersNode(1065...1077)(
-         [],
-         [OptionalParameterNode(1065...1077)(
-            :a,
-            (1065...1066),
-            (1067...1068),
-            ParenthesesNode(1069...1077)(
-              StatementsNode(1070...1076)(
-                [RangeNode(1070...1076)(
-                   IntegerNode(1070...1071)(),
-                   IntegerNode(1074...1076)(),
-                   (1071...1074),
-                   1
-                 )]
-              ),
-              (1069...1070),
-              (1076...1077)
-            )
-          )],
-         [],
+       ScopeNode(1057...1082)(
+         ParametersNode(1065...1077)(
+           [],
+           [OptionalParameterNode(1065...1077)(
+              :a,
+              (1065...1066),
+              (1067...1068),
+              ParenthesesNode(1069...1077)(
+                StatementsNode(1070...1076)(
+                  [RangeNode(1070...1076)(
+                     IntegerNode(1070...1071)(),
+                     IntegerNode(1074...1076)(),
+                     (1071...1074),
+                     1
+                   )]
+                ),
+                (1069...1070),
+                (1076...1077)
+              )
+            )],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:a]
        ),
-       nil,
-       [:a],
        (1057...1060),
        nil,
        (1064...1065),
@@ -1246,33 +1289,35 @@ ProgramNode(0...1194)(
      DefNode(1084...1108)(
        (1088...1091),
        nil,
-       ParametersNode(1092...1103)(
-         [],
-         [OptionalParameterNode(1092...1103)(
-            :a,
-            (1092...1093),
-            (1094...1095),
-            ParenthesesNode(1096...1103)(
-              StatementsNode(1097...1102)(
-                [RangeNode(1097...1102)(
-                   nil,
-                   IntegerNode(1100...1102)(),
-                   (1097...1100),
-                   1
-                 )]
-              ),
-              (1096...1097),
-              (1102...1103)
-            )
-          )],
-         [],
+       ScopeNode(1084...1108)(
+         ParametersNode(1092...1103)(
+           [],
+           [OptionalParameterNode(1092...1103)(
+              :a,
+              (1092...1093),
+              (1094...1095),
+              ParenthesesNode(1096...1103)(
+                StatementsNode(1097...1102)(
+                  [RangeNode(1097...1102)(
+                     nil,
+                     IntegerNode(1100...1102)(),
+                     (1097...1100),
+                     1
+                   )]
+                ),
+                (1096...1097),
+                (1102...1103)
+              )
+            )],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:a]
        ),
-       nil,
-       [:a],
        (1084...1087),
        nil,
        (1091...1092),
@@ -1283,33 +1328,35 @@ ProgramNode(0...1194)(
      DefNode(1110...1133)(
        (1114...1117),
        nil,
-       ParametersNode(1118...1128)(
-         [],
-         [OptionalParameterNode(1118...1128)(
-            :a,
-            (1118...1119),
-            (1120...1121),
-            ParenthesesNode(1122...1128)(
-              StatementsNode(1123...1127)(
-                [RangeNode(1123...1127)(
-                   IntegerNode(1123...1124)(),
-                   nil,
-                   (1124...1127),
-                   1
-                 )]
-              ),
-              (1122...1123),
-              (1127...1128)
-            )
-          )],
-         [],
+       ScopeNode(1110...1133)(
+         ParametersNode(1118...1128)(
+           [],
+           [OptionalParameterNode(1118...1128)(
+              :a,
+              (1118...1119),
+              (1120...1121),
+              ParenthesesNode(1122...1128)(
+                StatementsNode(1123...1127)(
+                  [RangeNode(1123...1127)(
+                     IntegerNode(1123...1124)(),
+                     nil,
+                     (1124...1127),
+                     1
+                   )]
+                ),
+                (1122...1123),
+                (1127...1128)
+              )
+            )],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:a]
        ),
-       nil,
-       [:a],
        (1110...1113),
        nil,
        (1117...1118),
@@ -1320,57 +1367,57 @@ ProgramNode(0...1194)(
      DefNode(1135...1167)(
        (1139...1145),
        nil,
-       ParametersNode(1146...1147)(
-         [RequiredParameterNode(1146...1147)(:a)],
-         [],
-         [],
-         nil,
-         [],
-         nil,
-         nil
-       ),
-       StatementsNode(1151...1163)(
-         [CallNode(1151...1163)(
-            CallNode(1151...1155)(
+       ScopeNode(1135...1167)(
+         ParametersNode(1146...1147)(
+           [RequiredParameterNode(1146...1147)(:a)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
+         StatementsNode(1151...1163)(
+           [CallNode(1151...1163)(
+              CallNode(1151...1155)(
+                nil,
+                nil,
+                (1151...1155),
+                nil,
+                nil,
+                nil,
+                nil,
+                0,
+                "item"
+              ),
               nil,
+              (1156...1158),
               nil,
-              (1151...1155),
-              nil,
-              nil,
+              ArgumentsNode(1159...1163)(
+                [CallNode(1159...1163)(
+                   nil,
+                   nil,
+                   (1159...1160),
+                   nil,
+                   nil,
+                   nil,
+                   BlockNode(1161...1163)(
+                     ScopeNode(1161...1163)(nil, nil, []),
+                     (1161...1162),
+                     (1162...1163)
+                   ),
+                   0,
+                   "a"
+                 )]
+              ),
               nil,
               nil,
               0,
-              "item"
-            ),
-            nil,
-            (1156...1158),
-            nil,
-            ArgumentsNode(1159...1163)(
-              [CallNode(1159...1163)(
-                 nil,
-                 nil,
-                 (1159...1160),
-                 nil,
-                 nil,
-                 nil,
-                 BlockNode(1161...1163)(
-                   [],
-                   nil,
-                   nil,
-                   (1161...1162),
-                   (1162...1163)
-                 ),
-                 0,
-                 "a"
-               )]
-            ),
-            nil,
-            nil,
-            0,
-            ">>"
-          )]
+              ">>"
+            )]
+         ),
+         [:a]
        ),
-       [:a],
        (1135...1138),
        nil,
        (1145...1146),
@@ -1381,20 +1428,22 @@ ProgramNode(0...1194)(
      DefNode(1169...1194)(
        (1173...1176),
        nil,
-       ParametersNode(1177...1189)(
-         [RequiredParameterNode(1177...1179)(:_a),
-          RequiredParameterNode(1181...1183)(:_a),
-          RequiredParameterNode(1185...1186)(:b),
-          RequiredParameterNode(1188...1189)(:c)],
-         [],
-         [],
+       ScopeNode(1169...1194)(
+         ParametersNode(1177...1189)(
+           [RequiredParameterNode(1177...1179)(:_a),
+            RequiredParameterNode(1181...1183)(:_a),
+            RequiredParameterNode(1185...1186)(:b),
+            RequiredParameterNode(1188...1189)(:c)],
+           [],
+           [],
+           nil,
+           [],
+           nil,
+           nil
+         ),
          nil,
-         [],
-         nil,
-         nil
+         [:_a, :b, :c]
        ),
-       nil,
-       [:_a, :b, :c],
        (1169...1172),
        nil,
        (1176...1177),

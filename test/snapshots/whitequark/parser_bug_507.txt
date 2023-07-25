@@ -5,23 +5,25 @@ ProgramNode(0...19)(
        :m,
        0,
        LambdaNode(4...19)(
-         [:args],
-         (4...6),
-         BlockParametersNode(7...12)(
-           ParametersNode(7...12)(
-             [],
-             [],
-             [],
-             RestParameterNode(7...12)((7...8), (8...12)),
+         ScopeNode(4...19)(
+           BlockParametersNode(7...12)(
+             ParametersNode(7...12)(
+               [],
+               [],
+               [],
+               RestParameterNode(7...12)((7...8), (8...12)),
+               [],
+               nil,
+               nil
+             ),
              [],
              nil,
              nil
            ),
-           [],
            nil,
-           nil
+           [:args]
          ),
-         nil
+         (4...6)
        ),
        (0...1),
        (2...3)

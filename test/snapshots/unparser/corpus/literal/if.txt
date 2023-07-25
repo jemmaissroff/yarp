@@ -160,23 +160,25 @@ ProgramNode(0...246)(
          nil,
          nil,
          BlockNode(205...222)(
-           [:pair],
-           BlockParametersNode(207...213)(
-             ParametersNode(208...212)(
-               [RequiredParameterNode(208...212)(:pair)],
+           ScopeNode(205...222)(
+             BlockParametersNode(207...213)(
+               ParametersNode(208...212)(
+                 [RequiredParameterNode(208...212)(:pair)],
+                 [],
+                 [],
+                 nil,
+                 [],
+                 nil,
+                 nil
+               ),
                [],
-               [],
-               nil,
-               [],
-               nil,
-               nil
+               (207...208),
+               (212...213)
              ),
-             [],
-             (207...208),
-             (212...213)
-           ),
-           StatementsNode(216...220)(
-             [LocalVariableReadNode(216...220)(:pair, 0)]
+             StatementsNode(216...220)(
+               [LocalVariableReadNode(216...220)(:pair, 0)]
+             ),
+             [:pair]
            ),
            (205...206),
            (221...222)

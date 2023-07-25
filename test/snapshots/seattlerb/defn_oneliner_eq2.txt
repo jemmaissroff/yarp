@@ -11,17 +11,19 @@ ProgramNode(0...28)(
          [DefNode(10...24)(
             (14...16),
             nil,
-            ParametersNode(17...18)(
-              [RequiredParameterNode(17...18)(:o)],
-              [],
-              [],
-              nil,
-              [],
-              nil,
-              nil
+            ScopeNode(10...24)(
+              ParametersNode(17...18)(
+                [RequiredParameterNode(17...18)(:o)],
+                [],
+                [],
+                nil,
+                [],
+                nil,
+                nil
+              ),
+              StatementsNode(22...24)([IntegerNode(22...24)()]),
+              [:o]
             ),
-            StatementsNode(22...24)([IntegerNode(22...24)()]),
-            [:o],
             (10...13),
             nil,
             (16...17),

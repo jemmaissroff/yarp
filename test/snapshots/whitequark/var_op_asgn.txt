@@ -23,16 +23,18 @@ ProgramNode(0...53)(
      DefNode(30...53)(
        (34...35),
        nil,
-       nil,
-       StatementsNode(37...48)(
-         [ClassVariableOperatorWriteNode(37...48)(
-            (37...42),
-            (43...45),
-            IntegerNode(46...48)(),
-            :|
-          )]
+       ScopeNode(30...53)(
+         nil,
+         StatementsNode(37...48)(
+           [ClassVariableOperatorWriteNode(37...48)(
+              (37...42),
+              (43...45),
+              IntegerNode(46...48)(),
+              :|
+            )]
+         ),
+         []
        ),
-       [],
        (30...33),
        nil,
        nil,

@@ -18,22 +18,22 @@ ProgramNode(0...67)(
                    nil,
                    nil,
                    BlockNode(17...43)(
-                     [],
-                     nil,
-                     StatementsNode(20...38)(
-                       [DefNode(20...38)(
-                          (24...34),
-                          nil,
-                          nil,
-                          nil,
-                          [],
-                          (20...23),
-                          nil,
-                          nil,
-                          nil,
-                          nil,
-                          (35...38)
-                        )]
+                     ScopeNode(17...43)(
+                       nil,
+                       StatementsNode(20...38)(
+                         [DefNode(20...38)(
+                            (24...34),
+                            nil,
+                            ScopeNode(20...38)(nil, nil, []),
+                            (20...23),
+                            nil,
+                            nil,
+                            nil,
+                            nil,
+                            (35...38)
+                          )]
+                       ),
+                       []
                      ),
                      (17...19),
                      (40...43)

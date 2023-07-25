@@ -24,22 +24,24 @@ ProgramNode(0...27)(
             ),
             nil,
             BlockNode(15...27)(
-              [:bar],
-              BlockParametersNode(18...23)(
-                ParametersNode(19...22)(
-                  [RequiredParameterNode(19...22)(:bar)],
+              ScopeNode(15...27)(
+                BlockParametersNode(18...23)(
+                  ParametersNode(19...22)(
+                    [RequiredParameterNode(19...22)(:bar)],
+                    [],
+                    [],
+                    nil,
+                    [],
+                    nil,
+                    nil
+                  ),
                   [],
-                  [],
-                  nil,
-                  [],
-                  nil,
-                  nil
+                  (18...19),
+                  (22...23)
                 ),
-                [],
-                (18...19),
-                (22...23)
+                nil,
+                [:bar]
               ),
-              nil,
               (15...17),
               (24...27)
             ),

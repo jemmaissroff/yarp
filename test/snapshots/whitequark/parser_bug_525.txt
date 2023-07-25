@@ -27,20 +27,26 @@ ProgramNode(0...32)(
        ),
        nil,
        BlockNode(12...32)(
-         [],
-         nil,
-         StatementsNode(16...27)(
-           [CallNode(16...27)(
-              nil,
-              nil,
-              (16...18),
-              (18...19),
-              nil,
-              (19...20),
-              BlockNode(21...27)([], nil, nil, (21...23), (24...27)),
-              0,
-              "m3"
-            )]
+         ScopeNode(12...32)(
+           nil,
+           StatementsNode(16...27)(
+             [CallNode(16...27)(
+                nil,
+                nil,
+                (16...18),
+                (18...19),
+                nil,
+                (19...20),
+                BlockNode(21...27)(
+                  ScopeNode(21...27)(nil, nil, []),
+                  (21...23),
+                  (24...27)
+                ),
+                0,
+                "m3"
+              )]
+           ),
+           []
          ),
          (12...14),
          (29...32)

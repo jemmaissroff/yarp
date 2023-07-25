@@ -2,25 +2,27 @@ ProgramNode(0...26)(
   [],
   StatementsNode(0...26)(
     [LambdaNode(0...8)(
-       [:*],
-       (0...2),
-       BlockParametersNode(3...4)(
-         ParametersNode(3...4)(
-           [],
-           [],
-           [],
-           RestParameterNode(3...4)((3...4), nil),
+       ScopeNode(0...8)(
+         BlockParametersNode(3...4)(
+           ParametersNode(3...4)(
+             [],
+             [],
+             [],
+             RestParameterNode(3...4)((3...4), nil),
+             [],
+             nil,
+             nil
+           ),
            [],
            nil,
            nil
          ),
-         [],
          nil,
-         nil
+         [:*]
        ),
-       nil
+       (0...2)
      ),
-     LambdaNode(10...19)([], (10...12), nil, nil),
-     LambdaNode(21...26)([], (21...23), nil, nil)]
+     LambdaNode(10...19)(ScopeNode(10...19)(nil, nil, []), (10...12)),
+     LambdaNode(21...26)(ScopeNode(21...26)(nil, nil, []), (21...23))]
   )
 )

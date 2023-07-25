@@ -9,7 +9,7 @@ ProgramNode(0...17)(
          nil,
          ArgumentsNode(2...4)([SymbolNode(2...4)((2...3), (3...4), nil, "b")]),
          nil,
-         BlockNode(5...11)([], nil, nil, (5...7), (8...11)),
+         BlockNode(5...11)(ScopeNode(5...11)(nil, nil, []), (5...7), (8...11)),
          0,
          "a"
        ),

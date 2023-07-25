@@ -311,23 +311,25 @@ ProgramNode(0...746)(
           ArrayPatternNode(444...463)(
             nil,
             [LambdaNode(445...459)(
-               [:b],
-               (445...447),
-               BlockParametersNode(447...450)(
-                 ParametersNode(448...449)(
-                   [RequiredParameterNode(448...449)(:b)],
+               ScopeNode(445...459)(
+                 BlockParametersNode(447...450)(
+                   ParametersNode(448...449)(
+                     [RequiredParameterNode(448...449)(:b)],
+                     [],
+                     [],
+                     nil,
+                     [],
+                     nil,
+                     nil
+                   ),
                    [],
-                   [],
-                   nil,
-                   [],
-                   nil,
-                   nil
+                   (447...448),
+                   (449...450)
                  ),
-                 [],
-                 (447...448),
-                 (449...450)
+                 StatementsNode(453...457)([TrueNode(453...457)()]),
+                 [:b]
                ),
-               StatementsNode(453...457)([TrueNode(453...457)()])
+               (445...447)
              ),
              LocalVariableWriteNode(461...462)(:c, 0, nil, (461...462), nil)],
             nil,
