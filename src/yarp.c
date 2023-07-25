@@ -9103,23 +9103,27 @@ parse_symbol(yp_parser_t *parser, yp_lex_mode_t *lex_mode, yp_lex_state_t next_s
     if (can_be_interpolated) {
         // Create a node_list first. We'll use this to check if it should be an InterpolatedSymbolNode
         // or a SymbolNode
-        yp_node_list_t node_list = YP_EMPTY_NODE_LIST;
+        yp_node_list_t *node_list = malloc(sizeof(yp_node_list_t));
+        node_list->nodes = NULL;
+        node_list->size = 0;
+        node_list->capacity = 0;
 
         while (!match_any_type_p(parser, 2, YP_TOKEN_STRING_END, YP_TOKEN_EOF)) {
             yp_node_t *part = parse_string_part(parser);
             if (part != NULL) {
-                yp_node_list_append(&node_list, part);
+                yp_node_list_append(node_list, part);
             }
         }
 
         yp_node_t *res;
         // If the only element on the node_list is a StringNode, we know this is a SymbolNode
         // and not an InterpolatedSymbolNode
-        if (node_list.size == 1 && node_list.nodes[0]->type == YP_NODE_STRING_NODE) {
-            res = (yp_node_t *)yp_string_node_to_symbol_node(parser, (yp_string_node_t *)node_list.nodes[0]);
+        if (node_list->size == 1 && node_list->nodes[0]->type == YP_NODE_STRING_NODE) {
+            res = (yp_node_t *)yp_string_node_to_symbol_node(parser, (yp_string_node_t *)node_list->nodes[0]);
+            free(node_list);
         }
         else {
-            yp_interpolated_symbol_node_t *interpolated = yp_interpolated_symbol_node_create(parser, &opening, &node_list, &opening);
+            yp_interpolated_symbol_node_t *interpolated = yp_interpolated_symbol_node_create(parser, &opening, node_list, &opening);
             yp_interpolated_symbol_node_closing_set(interpolated, &parser->current);
             res = (yp_node_t *) interpolated;
         }
